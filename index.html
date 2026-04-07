@@ -3,64 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IT-Support Bad Füssing</title>
-  <meta name="description" content="Persönliche Hilfe bei Computer, Handy, WLAN, Fernseher und Technik im Alltag – verständlich, ruhig und direkt vor Ort in Bad Füssing." />
+  <title>Technik-Hilfe Bad Füssing</title>
+  <meta name="description" content="Persönliche Technik-Hilfe in Bad Füssing: Computer, Handy, WLAN, Fernseher und Technik im Alltag – ruhig erklärt, verständlich und direkt vor Ort." />
   <style>
     :root {
-      --bg: #f5f9fc;
-      --surface: rgba(255, 255, 255, 0.78);
-      --surface-strong: #ffffff;
-      --text: #0b1e3a;
-      --muted: #5c6f88;
-      --line: rgba(11, 30, 58, 0.08);
-      --blue-dark: #0d2f5f;
-      --blue: #2f6fb2;
-      --blue-light: #dcecff;
-      --green: #2aa36b;
-      --green-soft: #dff5ea;
-      --shadow: 0 20px 60px rgba(13, 47, 95, 0.12);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
+      --bg: #f3f8fd;
+      --bg-2: #eef5fb;
+      --surface: rgba(255,255,255,0.74);
+      --surface-strong: rgba(255,255,255,0.9);
+      --text: #0b1f3d;
+      --muted: #5a6f89;
+      --line: rgba(11,31,61,0.08);
+      --blue-dark: #08224a;
+      --blue: #1388ff;
+      --blue-soft: #d9efff;
+      --green: #59be34;
+      --green-soft: #e5f7df;
+      --shadow: 0 24px 60px rgba(8,34,74,0.12);
+      --shadow-soft: 0 12px 30px rgba(8,34,74,0.08);
+      --radius-xl: 36px;
+      --radius-lg: 26px;
       --radius-md: 18px;
-      --max: 1220px;
+      --max: 1240px;
     }
 
     * { box-sizing: border-box; }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(220, 236, 255, 0.95), transparent 34%),
-        radial-gradient(circle at 85% 10%, rgba(223, 245, 234, 0.9), transparent 28%),
-        linear-gradient(180deg, #f9fcff 0%, #f4f8fc 40%, #eef5fb 100%);
       color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(19,136,255,0.12), transparent 28%),
+        radial-gradient(circle at 90% 12%, rgba(89,190,52,0.10), transparent 26%),
+        linear-gradient(180deg, #f9fcff 0%, var(--bg) 38%, var(--bg-2) 100%);
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    p, h1, h2, h3 { margin: 0; }
 
     .container {
-      width: min(calc(100% - 40px), var(--max));
+      width: min(calc(100% - 36px), var(--max));
       margin: 0 auto;
     }
 
     .section {
-      padding: 100px 0;
+      padding: 110px 0;
       position: relative;
     }
 
@@ -68,72 +60,72 @@
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      font-size: 0.95rem;
-      font-weight: 600;
+      font-size: 0.96rem;
+      font-weight: 700;
       color: var(--blue);
       letter-spacing: 0.01em;
-      margin-bottom: 16px;
+      margin-bottom: 18px;
     }
 
     .eyebrow::before {
       content: "";
-      width: 34px;
+      width: 36px;
       height: 2px;
       border-radius: 999px;
       background: linear-gradient(90deg, var(--green), var(--blue));
     }
 
-    h1, h2, h3, p {
-      margin: 0;
-    }
-
     h1 {
-      font-size: clamp(2.7rem, 6vw, 5.4rem);
-      line-height: 0.96;
-      letter-spacing: -0.05em;
-      font-weight: 700;
+      font-size: clamp(2.9rem, 6vw, 5.8rem);
+      line-height: 0.95;
+      letter-spacing: -0.055em;
+      font-weight: 750;
+      max-width: 9ch;
     }
 
     h2 {
-      font-size: clamp(2rem, 4vw, 3.4rem);
-      line-height: 1.04;
-      letter-spacing: -0.04em;
-      font-weight: 700;
-      max-width: 12ch;
+      font-size: clamp(2.1rem, 4vw, 3.7rem);
+      line-height: 1.12;
+      letter-spacing: -0.035em;
+      font-weight: 740;
+      max-width: 14ch;
+      text-wrap: balance;
     }
 
     h3 {
-      font-size: 1.25rem;
-      line-height: 1.2;
-      font-weight: 650;
-      letter-spacing: -0.02em;
+      font-size: 1.24rem;
+      line-height: 1.34;
+      letter-spacing: -0.015em;
+      font-weight: 680;
+      max-width: 22ch;
+      text-wrap: balance;
     }
 
-    p.lead {
-      font-size: clamp(1.1rem, 2vw, 1.42rem);
+    .lead {
+      font-size: clamp(1.12rem, 2vw, 1.42rem);
       color: var(--muted);
-      max-width: 670px;
-      line-height: 1.7;
+      max-width: 690px;
+      line-height: 1.72;
       margin-top: 24px;
     }
 
-    p.copy {
+    .copy {
       color: var(--muted);
       font-size: 1.04rem;
-      line-height: 1.72;
+      line-height: 1.75;
     }
 
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 50;
+      z-index: 60;
       backdrop-filter: blur(18px);
-      background: rgba(249, 252, 255, 0.72);
-      border-bottom: 1px solid rgba(13, 47, 95, 0.06);
+      background: rgba(249,252,255,0.72);
+      border-bottom: 1px solid rgba(8,34,74,0.06);
     }
 
     .header-inner {
-      height: 78px;
+      min-height: 82px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -148,28 +140,30 @@
     }
 
     .brand-mark {
-      width: 54px;
-      height: 54px;
+      width: 58px;
+      height: 58px;
       border-radius: 18px;
-      background: linear-gradient(145deg, rgba(47, 111, 178, 0.15), rgba(42, 163, 107, 0.12));
-      display: grid;
-      place-items: center;
-      box-shadow: inset 0 0 0 1px rgba(47, 111, 178, 0.08);
+      overflow: hidden;
       flex-shrink: 0;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(255,255,255,0.6);
+      background: white;
     }
 
-    .brand-text {
-      min-width: 0;
+    .brand-mark img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .brand-title {
       font-size: 1rem;
-      font-weight: 700;
+      font-weight: 740;
       letter-spacing: -0.03em;
     }
 
     .brand-subtitle {
-      font-size: 0.92rem;
+      font-size: 0.93rem;
       color: var(--muted);
       white-space: nowrap;
       overflow: hidden;
@@ -183,12 +177,13 @@
     }
 
     .phone-link {
-      font-weight: 600;
+      font-weight: 650;
       color: var(--blue-dark);
-      padding: 10px 16px;
+      padding: 11px 16px;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.85);
-      border: 1px solid rgba(13, 47, 95, 0.07);
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(8,34,74,0.07);
+      box-shadow: 0 8px 20px rgba(8,34,74,0.04);
     }
 
     .btn {
@@ -196,66 +191,86 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      min-height: 54px;
+      min-height: 56px;
       padding: 0 24px;
       border-radius: 999px;
-      font-weight: 650;
+      font-weight: 680;
       font-size: 1rem;
-      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
       border: none;
       cursor: pointer;
+      transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
     }
 
-    .btn:hover {
-      transform: translateY(-1px);
-    }
+    .btn:hover { transform: translateY(-1px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
       color: white;
-      box-shadow: 0 14px 34px rgba(13, 47, 95, 0.24);
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      box-shadow: 0 14px 30px rgba(8,34,74,0.20);
     }
 
     .btn-secondary {
-      background: rgba(255, 255, 255, 0.9);
       color: var(--blue-dark);
-      border: 1px solid rgba(13, 47, 95, 0.08);
-      box-shadow: 0 10px 24px rgba(13, 47, 95, 0.08);
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(8,34,74,0.08);
+      box-shadow: 0 12px 24px rgba(8,34,74,0.07);
     }
 
     .hero {
-      padding: 66px 0 72px;
+      padding: 70px 0 86px;
       overflow: hidden;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
+      grid-template-columns: 1.02fr 0.98fr;
       align-items: center;
       gap: 48px;
     }
 
-    .hero-copy {
-      position: relative;
-      z-index: 2;
-    }
-
     .hero-actions {
-      margin-top: 36px;
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
+      margin-top: 34px;
     }
 
-    .hero-note {
-      margin-top: 22px;
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+      max-width: 760px;
+    }
+
+    .mini-card,
+    .card {
+      background: var(--surface);
+      border: 1px solid rgba(255,255,255,0.65);
+      backdrop-filter: blur(12px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .mini-card {
+      border-radius: 22px;
+      padding: 18px;
+    }
+
+    .mini-card strong {
+      display: block;
       font-size: 0.98rem;
-      color: var(--muted);
+      margin-bottom: 6px;
     }
 
-    .hero-visual-wrap {
+    .mini-card span {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .hero-stage {
       position: relative;
-      min-height: 620px;
+      min-height: 660px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -264,87 +279,117 @@
     .orb {
       position: absolute;
       border-radius: 50%;
-      filter: blur(8px);
+      filter: blur(10px);
       pointer-events: none;
     }
 
     .orb.one {
-      width: 360px;
-      height: 360px;
-      background: radial-gradient(circle at center, rgba(47,111,178,0.22), rgba(47,111,178,0));
-      top: 5%;
-      right: 8%;
+      width: 380px;
+      height: 380px;
+      top: 0;
+      right: 0;
+      background: radial-gradient(circle, rgba(19,136,255,0.22), rgba(19,136,255,0));
     }
 
     .orb.two {
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle at center, rgba(42,163,107,0.20), rgba(42,163,107,0));
-      bottom: 8%;
-      left: 12%;
+      width: 340px;
+      height: 340px;
+      bottom: 4%;
+      left: 2%;
+      background: radial-gradient(circle, rgba(89,190,52,0.18), rgba(89,190,52,0));
     }
 
     .hero-card {
       position: relative;
-      width: min(100%, 560px);
-      border-radius: 38px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.82), rgba(255,255,255,0.68));
-      border: 1px solid rgba(255,255,255,0.65);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(14px);
-      overflow: hidden;
+      width: min(100%, 610px);
       padding: 28px;
+      border-radius: 40px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.70));
+      border: 1px solid rgba(255,255,255,0.78);
+      box-shadow: var(--shadow);
+      overflow: hidden;
     }
 
     .hero-wave {
       position: absolute;
-      inset: auto -10% -8% -10%;
-      height: 58%;
+      inset: auto -8% -9% -8%;
+      height: 55%;
       background:
-        radial-gradient(110% 80% at 15% 50%, rgba(47,111,178,0.22), transparent 58%),
-        radial-gradient(70% 70% at 80% 55%, rgba(42,163,107,0.18), transparent 55%),
-        linear-gradient(180deg, rgba(220,236,255,0.10), rgba(220,236,255,0.42));
-      border-top-left-radius: 48% 36%;
+        radial-gradient(90% 70% at 18% 45%, rgba(19,136,255,0.18), transparent 55%),
+        radial-gradient(65% 65% at 82% 58%, rgba(89,190,52,0.16), transparent 55%),
+        linear-gradient(180deg, rgba(217,239,255,0.12), rgba(217,239,255,0.42));
+      border-top-left-radius: 46% 34%;
       border-top-right-radius: 42% 30%;
+      pointer-events: none;
     }
 
     .hero-logo-panel {
       position: relative;
       z-index: 2;
-      padding: 38px;
-      border-radius: 30px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(245,250,255,0.88));
-      border: 1px solid rgba(13,47,95,0.06);
-      min-height: 420px;
+      height: 450px;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.55);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.52);
+      background: linear-gradient(180deg, rgba(7,24,53,0.10), rgba(255,255,255,0.08));
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.65);
+    }
+
+    .hero-logo-panel img {
+      max-width: 88%;
+      max-height: 88%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
     }
 
     .hero-caption {
       position: relative;
       z-index: 2;
-      margin-top: 22px;
-      padding: 18px 20px;
-      border-radius: 20px;
-      background: rgba(255,255,255,0.78);
-      border: 1px solid rgba(13,47,95,0.06);
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       gap: 18px;
       align-items: center;
+      padding: 22px 24px;
+      margin-top: 20px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.80);
+      border: 1px solid rgba(8,34,74,0.06);
+    }
+
+    .hero-caption > div {
+      min-width: 0;
     }
 
     .hero-caption strong {
       display: block;
-      font-size: 1rem;
-      margin-bottom: 4px;
+      font-size: 1.12rem;
+      line-height: 1.35;
+      margin-bottom: 6px;
+      max-width: 26ch;
+      letter-spacing: -0.015em;
     }
 
     .hero-caption span {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.98rem;
+      line-height: 1.55;
+      max-width: 42ch;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 28px;
+      margin-bottom: 36px;
+    }
+
+    .section-head .copy {
+      max-width: 610px;
     }
 
     .trust-grid,
@@ -355,21 +400,21 @@
       gap: 22px;
     }
 
-    .trust-grid {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 42px;
-    }
+    .trust-grid { grid-template-columns: repeat(3, 1fr); }
+    .services-grid { grid-template-columns: repeat(3, 1fr); }
+    .steps-grid { grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
+    .contact-grid { grid-template-columns: 1.03fr 0.97fr; align-items: stretch; }
 
     .card {
-      background: var(--surface);
-      border: 1px solid rgba(255,255,255,0.6);
-      backdrop-filter: blur(10px);
       border-radius: var(--radius-lg);
-      box-shadow: 0 10px 30px rgba(13, 47, 95, 0.06);
     }
 
-    .trust-card {
-      padding: 28px;
+    .trust-card,
+    .service-card,
+    .step-card,
+    .contact-card,
+    .callback-card {
+      padding: 30px;
     }
 
     .icon {
@@ -379,151 +424,168 @@
       place-items: center;
       border-radius: 16px;
       margin-bottom: 18px;
-      background: linear-gradient(135deg, rgba(47,111,178,0.14), rgba(42,163,107,0.10));
+      background: linear-gradient(135deg, rgba(19,136,255,0.13), rgba(89,190,52,0.10));
       color: var(--blue-dark);
     }
 
-    .trust-card p {
-      margin-top: 12px;
-      color: var(--muted);
-    }
-
-    .section-head {
-      display: flex;
-      align-items: end;
-      justify-content: space-between;
-      gap: 28px;
-      margin-bottom: 34px;
-    }
-
-    .section-head .copy {
-      max-width: 600px;
-    }
-
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
+    .trust-card p,
+    .service-card p { margin-top: 12px; color: var(--muted); }
 
     .service-card {
-      padding: 28px;
-      min-height: 220px;
+      min-height: 240px;
       position: relative;
       overflow: hidden;
+      padding: 32px 32px 34px;
     }
 
     .service-card::after {
       content: "";
       position: absolute;
-      inset: auto -20% -28% auto;
-      width: 170px;
-      height: 170px;
+      width: 158px;
+      height: 158px;
+      right: -30px;
+      bottom: -30px;
       border-radius: 50%;
-      background: radial-gradient(circle at center, rgba(220,236,255,0.85), rgba(220,236,255,0));
+      background: radial-gradient(circle, rgba(217,239,255,0.95), rgba(217,239,255,0.72));
       pointer-events: none;
     }
 
-    .service-card p {
-      margin-top: 12px;
-      color: var(--muted);
-      max-width: 30ch;
-    }
-
-    .steps-wrap {
-      border-radius: 38px;
-      padding: 32px;
-      background:
-        radial-gradient(circle at top right, rgba(220,236,255,0.85), transparent 30%),
-        radial-gradient(circle at bottom left, rgba(223,245,234,0.75), transparent 26%),
-        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,251,255,0.88));
-      border: 1px solid rgba(13,47,95,0.06);
-      box-shadow: var(--shadow);
-    }
-
-    .steps-grid {
-      grid-template-columns: repeat(3, 1fr);
-      margin-top: 28px;
-    }
-
-    .step-card {
-      padding: 28px;
-      position: relative;
-    }
-
-    .step-number {
-      width: 46px;
-      height: 46px;
+    .card-icon-badge {
+      position: absolute;
+      right: 22px;
+      bottom: 22px;
+      width: 54px;
+      height: 54px;
       border-radius: 50%;
       display: grid;
       place-items: center;
-      font-weight: 700;
-      font-size: 1rem;
+      z-index: 2;
+      background: rgba(255,255,255,0.42);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(19,136,255,0.10);
+      box-shadow: 0 10px 24px rgba(8,34,74,0.08);
+      color: var(--blue-dark);
+    }
+
+    .card-icon-badge svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .steps-wrap {
+      padding: 34px;
+      border-radius: 40px;
+      background:
+        radial-gradient(circle at top right, rgba(217,239,255,0.80), transparent 28%),
+        radial-gradient(circle at bottom left, rgba(229,247,223,0.74), transparent 24%),
+        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,251,255,0.88));
+      border: 1px solid rgba(8,34,74,0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .step-card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .step-card::after {
+      content: "";
+      position: absolute;
+      width: 132px;
+      height: 132px;
+      right: -34px;
+      bottom: -34px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217,239,255,0.82), rgba(217,239,255,0.55));
+      pointer-events: none;
+    }
+
+    .step-card .card-icon-badge {
+      right: 18px;
+      bottom: 18px;
+      width: 48px;
+      height: 48px;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      font-weight: 760;
       color: white;
       background: linear-gradient(135deg, var(--blue-dark), var(--green));
-      margin-bottom: 18px;
-      box-shadow: 0 12px 22px rgba(13,47,95,0.18);
+      box-shadow: 0 12px 22px rgba(8,34,74,0.16);
+      position: relative;
+      z-index: 2;
     }
 
     .region-card {
-      position: relative;
-      overflow: hidden;
-      padding: 40px;
-      min-height: 360px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 28px;
       align-items: center;
+      min-height: 420px;
+      padding: 40px;
+      overflow: hidden;
     }
+
+    .region-copy .copy + .copy { margin-top: 16px; }
 
     .region-water {
       position: relative;
-      min-height: 280px;
-      border-radius: 30px;
+      min-height: 320px;
+      border-radius: 32px;
       overflow: hidden;
       background:
         linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.04)),
         radial-gradient(circle at 25% 25%, rgba(255,255,255,0.55), transparent 20%),
-        radial-gradient(circle at 75% 35%, rgba(255,255,255,0.3), transparent 18%),
-        linear-gradient(135deg, #d9edff 0%, #bfe0ff 34%, #dff5ea 100%);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.45);
+        radial-gradient(circle at 75% 35%, rgba(255,255,255,0.34), transparent 18%),
+        linear-gradient(135deg, #dff1ff 0%, #c3e2ff 36%, #e6f7e2 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.48);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 26px;
     }
 
-    .water-line,
-    .water-line::before,
-    .water-line::after {
+    .region-water::before,
+    .region-water::after {
       content: "";
       position: absolute;
-      left: -10%;
-      right: -10%;
-      height: 90px;
+      inset: auto -8% 18% -8%;
+      height: 88px;
       border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.35);
+      border: 2px solid rgba(255,255,255,0.34);
     }
 
-    .water-line {
-      bottom: 25%;
+    .region-water::after {
+      inset: auto -8% 4% -8%;
     }
 
-    .water-line::before {
-      bottom: -52px;
+    .region-logo-box {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 360px);
+      aspect-ratio: 1 / 1;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.62);
+      box-shadow: 0 20px 50px rgba(8,34,74,0.16);
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(6px);
     }
 
-    .water-line::after {
-      bottom: -104px;
-    }
-
-    .region-copy p {
-      margin-top: 20px;
-    }
-
-    .contact-grid {
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: stretch;
+    .region-logo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .contact-card,
-    .callback-card {
-      padding: 34px;
-    }
+    .callback-card { position: relative; }
 
     .contact-list {
       display: grid;
@@ -538,7 +600,7 @@
       padding: 16px 18px;
       border-radius: 18px;
       background: rgba(255,255,255,0.72);
-      border: 1px solid rgba(13,47,95,0.06);
+      border: 1px solid rgba(8,34,74,0.06);
     }
 
     .contact-item strong {
@@ -547,34 +609,45 @@
       font-size: 0.98rem;
     }
 
-    .contact-item span,
-    .contact-item a {
+    .contact-item a,
+    .contact-item span {
       color: var(--muted);
       font-size: 1rem;
+      word-break: break-word;
     }
 
     .callback-card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      background:
-        linear-gradient(180deg, rgba(13,47,95,0.96), rgba(21,63,117,0.94));
+      background: linear-gradient(180deg, rgba(8,34,74,0.98), rgba(15,55,104,0.95));
       color: white;
-      box-shadow: 0 24px 60px rgba(13, 47, 95, 0.22);
+      box-shadow: 0 26px 60px rgba(8,34,74,0.22);
+      overflow: hidden;
+    }
+
+    .callback-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -12% -16% auto;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(19,136,255,0.22), rgba(19,136,255,0));
+      pointer-events: none;
     }
 
     .callback-card p {
-      color: rgba(255,255,255,0.78);
-      margin-top: 14px;
+      color: rgba(255,255,255,0.8);
+      margin-top: 16px;
       max-width: 42ch;
     }
 
     .callback-card .btn-secondary {
-      background: rgba(255,255,255,0.95);
-      color: var(--blue-dark);
-      border: none;
       margin-top: 26px;
       align-self: flex-start;
+      background: rgba(255,255,255,0.96);
+      border: none;
     }
 
     .footer {
@@ -585,16 +658,16 @@
 
     .footer-inner {
       display: flex;
+      align-items: center;
       justify-content: space-between;
       gap: 20px;
-      align-items: center;
-      border-top: 1px solid rgba(13,47,95,0.08);
+      border-top: 1px solid rgba(8,34,74,0.08);
       padding-top: 22px;
     }
 
     .fade-up {
       opacity: 0;
-      transform: translateY(22px);
+      transform: translateY(24px);
       transition: opacity 700ms ease, transform 700ms ease;
       will-change: opacity, transform;
     }
@@ -607,115 +680,76 @@
     .delay-1 { transition-delay: 80ms; }
     .delay-2 { transition-delay: 160ms; }
     .delay-3 { transition-delay: 240ms; }
-    .delay-4 { transition-delay: 320ms; }
-    .delay-5 { transition-delay: 400ms; }
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1120px) {
       .hero-grid,
       .contact-grid,
-      .region-card {
-        grid-template-columns: 1fr;
-      }
+      .region-card { grid-template-columns: 1fr; }
 
-      .services-grid,
       .trust-grid,
-      .steps-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
+      .services-grid,
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
 
-      .hero-visual-wrap {
-        min-height: auto;
-      }
-
-      .section {
-        padding: 84px 0;
-      }
+      .hero-stage { min-height: auto; }
+      .section { padding: 88px 0; }
+      .section-head { align-items: flex-start; flex-direction: column; }
     }
 
     @media (max-width: 760px) {
-      .container {
-        width: min(calc(100% - 28px), var(--max));
-      }
-
-      .site-header {
-        position: sticky;
-      }
+      .container { width: min(calc(100% - 28px), var(--max)); }
 
       .header-inner {
-        height: auto;
         padding: 14px 0;
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .header-actions {
-        width: 100%;
-        flex-wrap: wrap;
-      }
+      .header-actions,
+      .hero-actions { width: 100%; flex-direction: column; }
 
       .phone-link,
-      .header-actions .btn {
-        flex: 1 1 100%;
-      }
+      .header-actions .btn,
+      .hero-actions .btn,
+      .btn { width: 100%; }
 
-      .hero {
-        padding-top: 34px;
-      }
+      .hero-points,
+      .trust-grid,
+      .services-grid,
+      .steps-grid { grid-template-columns: 1fr; }
 
       .hero-card,
       .steps-wrap,
       .region-card,
       .contact-card,
-      .callback-card {
-        padding: 24px;
-      }
+      .callback-card { padding: 24px; }
 
       .hero-logo-panel {
-        min-height: 300px;
-        padding: 24px;
+        height: 300px;
       }
 
-      .services-grid,
-      .trust-grid,
-      .steps-grid {
+      .hero-caption {
         grid-template-columns: 1fr;
       }
 
-      .section-head,
-      .hero-caption,
-      .footer-inner {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero-caption svg {
+        justify-self: flex-start;
       }
 
-      .hero-actions {
-        flex-direction: column;
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+
+      h2 {
+        max-width: 100%;
       }
 
-      .btn,
-      .hero-actions .btn {
-        width: 100%;
-      }
-
-      p.lead {
-        font-size: 1.08rem;
+      h3 {
+        max-width: 100%;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      .fade-up {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-
-      .btn {
-        transition: none;
-      }
+      html { scroll-behavior: auto; }
+      .fade-up { opacity: 1; transform: none; transition: none; }
+      .btn { transition: none; }
     }
   </style>
 </head>
@@ -723,16 +757,16 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Zur Startseite">
-        <div class="brand-mark" aria-hidden="true" style="overflow:hidden; padding:0; background:transparent; box-shadow:none; border-radius:18px;">
-          <img src="data:image/webp;base64,UklGRgI8AABXRUJQVlA4IPY7AACwPAGdASqEA1cCPj0eikUiKQj8jEgB4lnbv/nvAeX0ouqBf+gdOebeuh00cRi1C3V/5v8n/618+2+V5s7nLQVVb9T0+v7n5w7b6p7F0f6b+kz7TtQ6U4dnm7YdW+Gf+I11ax1jQ4z3gR2yNTH9f0NwJ2g5g4R7x0V9bVwXvB5kqZl1y2Y5m8+v2a2KQ1nD9m9W1XJ7iXW36fXz1Q0s5nS7v+Z5Q1lK7M5u3rjv9fK9QdS7Z2rT5b5Pzv7z8P9pP4mF5+0c7nQKj4+z2i7h6x4sF4u3aVn3Y8fN1W1N0m2Bf2P0+u0g6QY4uD9m2S4q1fP7f0Q0j8fQ4gZB9w7x3M0L0f4cWn1l4nY4rVw2c5X2R6Q6n6X2b9rF6d2Q7l2w5g+o4rC7V9b0Q5a5T2t6X6n9P7v7eQw6z3o8h5l2w5b6k6m0k6p5X8m7R4R5E7H9m7r8x7d0K8x3w3i4O1B8X5e6n8d6R5H5p4r5z5N8t7M5q5v7X8F4C3x7z8k4v7n7r8G6T3o8r8W7d8n4C8b5p6o8L4R5j6w6v8c6Z8M3w8n4v4o6F8y4o6W6V8A5g7H7t7i7B8n7V8c8U8c6U6a8W6V6g6a6m8w6c7g8W8F6w8b7T8m6u6c6Y8Y6w7f7g5T7i7J6o5L7A5H4m7v6n5f8K3Y0tL6r6e1NQ4m7d6h4w4a3u5W0q6f8G3d+J8m3p9w8v7r6p7V8b7V7a4k6W7S7b7P8j5L6c5t7e8N4t7e8f6T5b7H5I7G7j5E4F4B3A0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" alt="Technik-Hilfe Logo" style="width:100%; height:100%; object-fit:cover; border-radius:18px;" />
+        <div class="brand-mark" aria-hidden="true">
+          <img src="logo.png" alt="Technik-Hilfe Logo" />
         </div>
-        <div class="brand-text">
-          <div class="brand-title">IT-Support Bad Füssing</div>
-          <div class="brand-subtitle">Persönlich. Ruhig. Verständlich.</div>
+        <div>
+          <div class="brand-title">Technik-Hilfe Bad Füssing</div>
+          <div class="brand-subtitle">Persönlich vor Ort. Ruhig erklärt.</div>
         </div>
       </a>
       <div class="header-actions">
-        <a class="phone-link" href="tel:xxx">xxx</a>
+        <a class="phone-link" href="tel:015785082458">015785082458</a>
         <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
       </div>
     </div>
@@ -741,29 +775,42 @@
   <main id="top">
     <section class="hero section">
       <div class="container hero-grid">
-        <div class="hero-copy fade-up is-visible">
-          <div class="eyebrow">Technikhilfe in Bad Füssing</div>
-          <h1>Technik.<br />Einfach.<br />Verständlich.</h1>
-          <p class="lead">Persönliche Hilfe bei Computer, Handy, WLAN, Fernseher und Technik im Alltag. Direkt vor Ort, geduldig erklärt und ohne komplizierte Fachsprache.</p>
+        <div class="fade-up is-visible">
+          <div class="eyebrow">Technik-Hilfe in Bad Füssing</div>
+          <h1>Technik, wieder einfach</h1>
+          <p class="lead">Wir helfen bei Computer, Handy, WLAN, Fernseher und Technik im Alltag – ruhig, verständlich und direkt vor Ort.</p>
           <div class="hero-actions">
             <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
-            <a class="btn btn-secondary" href="tel:xxx">Anrufen</a>
+            <a class="btn btn-secondary" href="tel:015785082458">Direkt anrufen</a>
           </div>
-          
+          <div class="hero-points">
+            <div class="mini-card">
+              <strong>Persönlich</strong>
+              <span>Hilfe von Mensch zu Mensch, direkt in der Region.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Verständlich</strong>
+              <span>Alles wird verständlich erklärt.</span>
+            </div>
+            <div class="mini-card">
+              <strong>Vor Ort</strong>
+              <span>Unterstützung in Bad Füssing und Umgebung.</span>
+            </div>
+          </div>
         </div>
 
-        <div class="hero-visual-wrap fade-up delay-1 is-visible" aria-hidden="true">
+        <div class="hero-stage fade-up delay-1 is-visible" aria-hidden="true">
           <div class="orb one"></div>
           <div class="orb two"></div>
           <div class="hero-card">
-            <div class="hero-logo-panel" style="padding:0; overflow:hidden; background:transparent; border:none; box-shadow:none; min-height:420px;">
-              <img src="data:image/webp;base64,UklGRgI8AABXRUJQVlA4IPY7AACwPAGdASqEA1cCPj0eikUiKQj8jEgB4lnbv/nvAeX0ouqBf+gdOebeuh00cRi1C3V/5v8n/618+2+V5s7nLQVVb9T0+v7n5w7b6p7F0f6b+kz7TtQ6U4dnm7YdW+Gf+I11ax1jQ4z3gR2yNTH9f0NwJ2g5g4R7x0V9bVwXvB5kqZl1y2Y5m8+v2a2KQ1nD9m9W1XJ7iXW36fXz1Q0s5nS7v+Z5Q1lK7M5u3rjv9fK9QdS7Z2rT5b5Pzv7z8P9pP4mF5+0c7nQKj4+z2i7h6x4sF4u3aVn3Y8fN1W1N0m2Bf2P0+u0g6QY4uD9m2S4q1fP7f0Q0j8fQ4gZB9w7x3M0L0f4cWn1l4nY4rVw2c5X2R6Q6n6X2b9rF6d2Q7l2w5g+o4rC7V9b0Q5a5T2t6X6n9P7v7eQw6z3o8h5l2w5b6k6m0k6p5X8m7R4R5E7H9m7r8x7d0K8x3w3i4O1B8X5e6n8d6R5H5p4r5z5N8t7M5q5v7X8F4C3x7z8k4v7n7r8G6T3o8r8W7d8n4C8b5p6o8L4R5j6w6v8c6Z8M3w8n4v4o6F8y4o6W6V8A5g7H7t7i7B8n7V8c8U8c6U6a8W6V6g6a6m8w6c7g8W8F6w8b7T8m6u6c6Y8Y6w7f7g5T7i7J6o5L7A5H4m7v6n5f8K3Y0tL6r6e1NQ4m7d6h4w4a3u5W0q6f8G3d+J8m3p9w8v7r6p7V8b7V7a4k6W7S7b7P8j5L6c5t7e8N4t7e8f6T5b7H5I7G7j5E4F4B3A0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==" alt="Technik-Hilfe Bad Füssing Logo" style="width:100%; height:100%; object-fit:contain; display:block;" />
+            <div class="hero-logo-panel">
+              <img src="logo.png" alt="Technik-Hilfe Bad Füssing Logo" />
             </div>
             <div class="hero-wave"></div>
             <div class="hero-caption">
               <div>
-                <strong>Persönliche Unterstützung</strong>
-                <span>Ruhig erklärt. Direkt vor Ort. Ohne Hektik.</span>
+                <strong>Moderne Hilfe mit Ruhe und Klarheit</strong>
+                <span>Vertrauensvoll, freundlich und auf das Wesentliche konzentriert.</span>
               </div>
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M5 12H19" stroke="#0D2F5F" stroke-width="1.8" stroke-linecap="round"/>
@@ -780,9 +827,9 @@
         <div class="section-head fade-up">
           <div>
             <div class="eyebrow">Vertrauen & Klarheit</div>
-            <h2>Hilfe, die ruhig und verständlich bleibt.</h2>
+            <h2>Verlässliche Hilfe.</h2>
           </div>
-          
+          <p class="copy"></p>
         </div>
 
         <div class="trust-grid">
@@ -793,7 +840,7 @@
               </svg>
             </div>
             <h3>Persönlich vor Ort</h3>
-            <p>Direkte Unterstützung in Bad Füssing und Umgebung – ohne Hotline, ohne Umwege.</p>
+            <p>Keine anonyme Hotline, sondern direkte Unterstützung in Bad Füssing und Umgebung.</p>
           </article>
 
           <article class="card trust-card fade-up delay-2">
@@ -805,7 +852,7 @@
               </svg>
             </div>
             <h3>Geduldig erklärt</h3>
-            <p>Jeder Schritt wird so erklärt, dass er im Alltag wirklich verständlich bleibt.</p>
+            <p>Fragen sind jederzeit willkommen. Jeder Schritt wird ruhig und verständlich erklärt.</p>
           </article>
 
           <article class="card trust-card fade-up delay-3">
@@ -817,7 +864,7 @@
               </svg>
             </div>
             <h3>Ohne Fachsprache</h3>
-            <p>Klare Worte statt komplizierter Begriffe – damit man am Ende wirklich weiterkommt.</p>
+            <p>Klare Worte statt komplizierter Begriffe – damit Technik wieder einfacher wird.</p>
           </article>
         </div>
       </div>
@@ -828,35 +875,81 @@
         <div class="section-head fade-up">
           <div>
             <div class="eyebrow">Leistungen</div>
-            <h2>Unterstützung für die Technik im Alltag.</h2>
+            <h2>Hilfe für die Technik, die täglich gebraucht wird.</h2>
           </div>
-          
+          <p class="copy"></p>
         </div>
 
         <div class="services-grid">
           <article class="card service-card fade-up delay-1">
             <h3>Computer & Laptop Hilfe</h3>
-            <p>Unterstützung bei langsamen Geräten, Problemen im Alltag oder Fragen zur Bedienung.</p>
+            <p>Wenn der Computer langsam ist, etwas nicht mehr funktioniert oder Unsicherheit bei der Bedienung besteht.</p>
+            <div class="card-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="5" width="16" height="11" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 19H15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
           </article>
+
           <article class="card service-card fade-up delay-2">
             <h3>Handy & Tablet Einrichtung</h3>
-            <p>Hilfe beim Einrichten, Übertragen von Daten und bei wichtigen Einstellungen.</p>
+            <p>Einrichten neuer Geräte, Übertragen wichtiger Daten und Hilfe bei den richtigen Einstellungen.</p>
+            <div class="card-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="7" y="3.5" width="10" height="17" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M11 17.5H13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
           </article>
+
           <article class="card service-card fade-up delay-3">
             <h3>WLAN & Internet Probleme</h3>
-            <p>Wenn die Verbindung nicht richtig funktioniert, wird die Ursache in Ruhe gefunden.</p>
+            <p>Wenn das Internet instabil ist oder das WLAN nicht zuverlässig funktioniert, wird die Ursache sauber gefunden.</p>
+            <div class="card-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.5 9.5C8.8 5.8 15.2 5.8 19.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M7.5 12.5C10.1 10.3 13.9 10.3 16.5 12.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M10.4 15.4C11.3 14.7 12.7 14.7 13.6 15.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <circle cx="12" cy="18.1" r="1.2" fill="currentColor"/>
+              </svg>
+            </div>
           </article>
+
           <article class="card service-card fade-up delay-1">
             <h3>Fernseher & Technik</h3>
-            <p>Einrichtung und Unterstützung bei Fernsehern und anderer Technik im Haushalt.</p>
+            <p>Unterstützung bei Fernsehern, Streaming, Anschlüssen und weiterer Technik im Haushalt.</p>
+            <div class="card-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3.5" y="5.5" width="17" height="10" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M9 19H15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
           </article>
+
           <article class="card service-card fade-up delay-2">
             <h3>Akku-Tausch & kleine Reparaturen</h3>
-            <p>Kleine Probleme werden sauber geprüft und, wenn möglich, direkt gelöst.</p>
+            <p>Kleinere Defekte werden geprüft und, wenn sinnvoll, direkt und unkompliziert behoben.</p>
+            <div class="card-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="4" y="7" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M18 10H20V14H18" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+                <path d="M8 10V14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M10 12H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
           </article>
+
           <article class="card service-card fade-up delay-3">
             <h3>Kaufberatung</h3>
-            <p>Hilfe bei der Auswahl passender Geräte – verständlich, ehrlich und ohne unnötige Extras.</p>
+            <p>Hilfe bei der Auswahl passender Geräte – ehrlich, verständlich und ohne unnötige Extras.</p>
+            <div class="card-icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 7H18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M8 7V5.8C8 4.8 8.8 4 9.8 4H14.2C15.2 4 16 4.8 16 5.8V7" stroke="currentColor" stroke-width="1.8"/>
+                <path d="M7 7L8.1 18.1C8.2 19.2 9.1 20 10.2 20H13.8C14.9 20 15.8 19.2 15.9 18.1L17 7" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+              </svg>
+            </div>
           </article>
         </div>
       </div>
@@ -868,26 +961,48 @@
           <div class="section-head" style="margin-bottom: 0;">
             <div>
               <div class="eyebrow">So arbeiten wir</div>
-              <h2>Einfacher Ablauf. Ohne komplizierte Wege.</h2>
+              <h2>Ein klarer Ablauf. Ruhig, einfach und persönlich.</h2>
             </div>
-            
+            <p class="copy"></p>
           </div>
 
           <div class="steps-grid">
             <article class="card step-card fade-up delay-1">
               <div class="step-number">1</div>
               <h3>Kontakt aufnehmen</h3>
-              <p class="copy">Per Telefon oder E-Mail melden und kurz sagen, wobei Hilfe gebraucht wird.</p>
+              <p class="copy">Per Telefon oder E-Mail kurz melden und sagen, wobei Unterstützung gebraucht wird.</p>
+              <div class="card-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 4H9L11 9L8.5 10.5C9.7 13 11.7 15 14.2 16.2L15.7 13.7L20.7 15.7V20C20.7 20.6 20.2 21 19.7 21C11.6 21 5 14.4 5 6.3C5 5.8 5.4 5.3 6 5.3L5 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+              </div>
             </article>
+
             <article class="card step-card fade-up delay-2">
               <div class="step-number">2</div>
               <h3>Problem erklären</h3>
-              <p class="copy">In Ruhe schildern, was nicht funktioniert oder welche Unterstützung gewünscht ist.</p>
+              <p class="copy">Gemeinsam wird in Ruhe besprochen, was nicht funktioniert oder was eingerichtet werden soll.</p>
+              <div class="card-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 20V10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  <path d="M8 14L12 10L16 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 20H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                </svg>
+              </div>
             </article>
+
             <article class="card step-card fade-up delay-3">
               <div class="step-number">3</div>
               <h3>Wir kommen vorbei</h3>
-              <p class="copy">Die Technik wird verständlich eingerichtet, geprüft oder direkt wieder zum Laufen gebracht.</p>
+              <p class="copy">Vor Ort wird die Technik eingerichtet, geprüft oder wieder zuverlässig zum Laufen gebracht.</p>
+              <div class="card-icon-badge" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 16L6 9H16L19 16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <path d="M7 16H15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  <circle cx="7.5" cy="17.5" r="1.5" fill="currentColor"/>
+                  <circle cx="15.5" cy="17.5" r="1.5" fill="currentColor"/>
+                </svg>
+              </div>
             </article>
           </div>
         </div>
@@ -899,11 +1014,14 @@
         <div class="card region-card fade-up">
           <div class="region-copy">
             <div class="eyebrow">Bad Füssing</div>
-            <h2>Regional. Ruhig. Nah am Menschen.</h2>
-            
+            <h2>Regional verwurzelt. Modern im Auftritt.</h2>
+            <p class="copy"></p>
+            <p class="copy"></p>
           </div>
           <div class="region-water" aria-hidden="true">
-            <div class="water-line"></div>
+            <div class="region-logo-box">
+              <img src="logo.png" alt="Technik-Hilfe Logo" />
+            </div>
           </div>
         </div>
       </div>
@@ -913,8 +1031,9 @@
       <div class="container contact-grid">
         <div class="card contact-card fade-up">
           <div class="eyebrow">Kontakt</div>
-          <h2>Ein Anruf genügt oft schon.</h2>
-          
+          <h2>Einfach melden. Wir kümmern uns darum.</h2>
+          <p class="copy" style="margin-top: 18px; max-width: 56ch;">Ob kleine Frage, neue Einrichtung oder akutes Problem.</p>
+          <p class="copy" style="margin-top: 18px; max-width: 56ch;">Kurz melden, Anliegen schildern und gemeinsam die passende Lösung finden.</p>
 
           <div class="contact-list">
             <div class="contact-item">
@@ -925,7 +1044,7 @@
               </div>
               <div>
                 <strong>Telefon</strong>
-                <a href="tel:xxx">xxx</a>
+                <a href="tel:015785082458">015785082458</a>
               </div>
             </div>
 
@@ -947,8 +1066,8 @@
         <div class="card callback-card fade-up delay-1">
           <div>
             <div class="eyebrow" style="color: rgba(255,255,255,0.84);">Rückruf</div>
-            <h3 style="font-size: clamp(1.7rem, 3vw, 2.4rem); line-height: 1.08; letter-spacing: -0.03em;">Lieber erst zurückgerufen werden?</h3>
-            
+            <h3 style="font-size: clamp(1.8rem, 3vw, 2.45rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 16ch;">Lieber erst kurz zurückgerufen werden?</h3>
+            <p>Auch das geht ganz einfach. Eine kurze Nachricht mit Ihrer Telefonnummer genügt, und wir rufen Sie auf schnellstem Wege zurück.</p>
           </div>
           <a class="btn btn-secondary" href="mailto:technik.hilfe.badfuessing@gmail.com?subject=Bitte%20um%20R%C3%BCckruf">Rückruf anfordern</a>
         </div>
@@ -958,8 +1077,8 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <span>IT-Support Bad Füssing</span>
-      <span>Persönliche Hilfe für Technik im Alltag</span>
+      <span>Technik-Hilfe Bad Füssing</span>
+      <span>Persönliche Unterstützung für Technik im Alltag</span>
     </div>
   </footer>
 
