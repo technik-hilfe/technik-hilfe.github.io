@@ -132,6 +132,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 26px;
+      position: relative;
     }
 
     .brand-wrap {
@@ -267,6 +268,55 @@
       background: rgba(255,255,255,0.94);
       border: 1px solid rgba(8,34,74,0.08);
       box-shadow: 0 12px 24px rgba(8,34,74,0.07);
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 54px;
+      height: 54px;
+      border: 1px solid rgba(8,34,74,0.08);
+      background: rgba(255,255,255,0.92);
+      border-radius: 16px;
+      box-shadow: 0 10px 24px rgba(8,34,74,0.06);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: 0;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle-lines {
+      width: 22px;
+      height: 16px;
+      position: relative;
+      display: block;
+    }
+
+    .menu-toggle-lines span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2.2px;
+      border-radius: 999px;
+      background: var(--blue-dark);
+      transition: transform 220ms ease, opacity 220ms ease, top 220ms ease;
+    }
+
+    .menu-toggle-lines span:nth-child(1) { top: 3px; }
+    .menu-toggle-lines span:nth-child(2) { top: 11px; }
+
+    .menu-toggle.is-open .menu-toggle-lines span:nth-child(1) {
+      top: 7px;
+      transform: rotate(45deg);
+    }
+
+    .menu-toggle.is-open .menu-toggle-lines span:nth-child(2) {
+      top: 7px;
+      transform: rotate(-45deg);
+    }
+
+    .mobile-menu {
+      display: none;
     }
 
     .hero {
@@ -516,10 +566,7 @@
       padding: 32px 32px 34px;
     }
 
-    .service-card::after,
-    .step-card::after,
-    .faq-card::after,
-    .pricing-card::after {
+    .has-badge::after {
       content: "";
       position: absolute;
       width: 104px;
@@ -650,18 +697,6 @@
       position: relative;
       overflow: hidden;
       min-height: 0;
-    }
-
-    .about-card::after {
-      content: "";
-      position: absolute;
-      width: 110px;
-      height: 110px;
-      right: -26px;
-      bottom: -26px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(217,239,255,0.78), rgba(217,239,255,0.40));
-      pointer-events: none;
     }
 
     .about-photo {
@@ -829,14 +864,16 @@
 
     .fade-up {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 700ms ease, transform 700ms ease;
+      transform: translateY(26px) scale(0.985);
+      transition:
+        opacity 700ms ease,
+        transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
       will-change: opacity, transform;
     }
 
     .fade-up.is-visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
 
     .delay-1 { transition-delay: 80ms; }
@@ -869,16 +906,6 @@
         align-items: flex-start;
         flex-direction: column;
       }
-
-      .header-inner {
-        align-items: flex-start;
-        flex-direction: column;
-        padding: 18px 0;
-      }
-
-      .header-actions {
-        width: 100%;
-      }
     }
 
     @media (max-width: 900px) {
@@ -890,21 +917,103 @@
     @media (max-width: 760px) {
       .container { width: min(calc(100% - 28px), var(--max)); }
 
-      .header-actions,
+      .site-header {
+        overflow: visible;
+      }
+
+      .header-inner {
+        min-height: 82px;
+        padding: 14px 0;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .brand-wrap {
+        gap: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+      }
+
+      .brand-subtitle {
+        white-space: normal;
+      }
+
+      .top-nav,
+      .header-actions {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .mobile-menu {
+        display: grid;
+        gap: 14px;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        right: 0;
+        background: rgba(249,252,255,0.96);
+        backdrop-filter: blur(18px);
+        border: 1px solid rgba(8,34,74,0.06);
+        border-radius: 26px;
+        box-shadow: 0 20px 40px rgba(8,34,74,0.12);
+        padding: 18px;
+        opacity: 0;
+        transform: translateY(-10px);
+        pointer-events: none;
+        transition: opacity 220ms ease, transform 220ms ease;
+      }
+
+      .mobile-menu.is-open {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+
+      .mobile-menu-nav {
+        display: grid;
+        gap: 10px;
+      }
+
+      .mobile-menu-nav a,
+      .mobile-contact-link,
+      .mobile-menu .btn {
+        width: 100%;
+      }
+
+      .mobile-menu-nav a,
+      .mobile-contact-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 18px;
+        border-radius: 18px;
+        background: rgba(255,255,255,0.92);
+        border: 1px solid rgba(8,34,74,0.06);
+        color: var(--blue-dark);
+        font-weight: 650;
+        box-shadow: 0 8px 18px rgba(8,34,74,0.04);
+      }
+
+      .mobile-menu-actions {
+        display: grid;
+        gap: 10px;
+      }
+
       .hero-actions {
         width: 100%;
         flex-direction: column;
       }
 
-      .phone-link,
-      .whatsapp-link,
-      .header-actions .btn,
       .hero-actions .btn,
       .btn {
         width: 100%;
       }
 
-      .top-nav,
       .hero-nav-grid,
       .hero-points,
       .trust-grid,
@@ -912,10 +1021,6 @@
       .steps-grid,
       .answers-grid {
         grid-template-columns: 1fr;
-      }
-
-      .top-nav {
-        display: grid;
       }
 
       .hero-card,
@@ -951,7 +1056,9 @@
       html { scroll-behavior: auto; }
       .fade-up { opacity: 1; transform: none; transition: none; }
       .btn,
-      .top-nav a { transition: none; }
+      .top-nav a,
+      .mobile-menu,
+      .menu-toggle-lines span { transition: none; }
     }
   </style>
 </head>
@@ -980,7 +1087,6 @@
 
       <div class="header-actions">
         <a class="phone-link" href="tel:015785082458">015785082458</a>
-
         <a class="whatsapp-link" href="https://wa.me/4915785082458" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp öffnen">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20 11.8C20 16.1 16.4 19.6 12 19.6C10.7 19.6 9.5 19.3 8.4 18.7L4.5 19.8L5.7 16.1C5 14.9 4.6 13.4 4.6 11.8C4.6 7.5 8.1 4 12.4 4C16.5 4 20 7.5 20 11.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
@@ -988,8 +1094,30 @@
           </svg>
           WhatsApp
         </a>
-
         <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <span class="menu-toggle-lines" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#preise">Preise</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#ueber-uns">Über uns</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+
+        <div class="mobile-menu-actions">
+          <a class="mobile-contact-link" href="tel:015785082458">015785082458</a>
+          <a class="mobile-contact-link" href="https://wa.me/4915785082458" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
+        </div>
       </div>
     </div>
   </header>
@@ -997,7 +1125,7 @@
   <main id="top">
     <section class="hero section">
       <div class="container hero-grid">
-        <div class="fade-up is-visible">
+        <div class="fade-up">
           <div class="eyebrow">Technik-Hilfe in Bad Füssing</div>
           <h1>Wenn Technik stört, helfen wir weiter.</h1>
           <p class="lead">
@@ -1010,22 +1138,22 @@
           </div>
 
           <div class="hero-points">
-            <div class="mini-card">
+            <div class="mini-card fade-up delay-1">
               <strong>Persönlich</strong>
               <span>Keine Hotline, kein Weiterreichen – direkter Kontakt mit echten Ansprechpartnern.</span>
             </div>
-            <div class="mini-card">
+            <div class="mini-card fade-up delay-2">
               <strong>Verständlich</strong>
               <span>Alles wird klar erklärt, damit Sie wissen, was gemacht wird und warum.</span>
             </div>
-            <div class="mini-card">
+            <div class="mini-card fade-up delay-3">
               <strong>Vor Ort</strong>
               <span>Hilfe direkt in Bad Füssing und Umgebung – auch bei kleinen Alltagsproblemen.</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-stage fade-up delay-1 is-visible">
+        <div class="hero-stage fade-up delay-1">
           <div class="orb one"></div>
           <div class="orb two"></div>
 
@@ -1038,7 +1166,7 @@
 
             <div class="hero-nav-panel">
               <strong>Schnell zum richtigen Bereich</strong>
-              <div class="hero-nav-grid" aria-label="Schnellnavigation">
+              <div class="hero-nav-grid">
                 <a href="#kontakt">
                   Kontakt
                   <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1144,7 +1272,7 @@
         </div>
 
         <div class="services-grid">
-          <article class="card service-card fade-up delay-1">
+          <article class="card service-card has-badge fade-up delay-1">
             <h3>Computer & Laptop Hilfe</h3>
             <p>Wenn der Computer langsam ist, Programme nicht richtig laufen oder bei der Bedienung Unsicherheit besteht.</p>
             <div class="card-icon-badge" aria-hidden="true">
@@ -1155,7 +1283,7 @@
             </div>
           </article>
 
-          <article class="card service-card fade-up delay-2">
+          <article class="card service-card has-badge fade-up delay-2">
             <h3>Handy & Tablet einrichten</h3>
             <p>Neue Geräte verständlich einrichten, wichtige Daten übertragen und sinnvolle Einstellungen gemeinsam festlegen.</p>
             <div class="card-icon-badge" aria-hidden="true">
@@ -1166,7 +1294,7 @@
             </div>
           </article>
 
-          <article class="card service-card fade-up delay-3">
+          <article class="card service-card has-badge fade-up delay-3">
             <h3>WLAN & Internet Probleme</h3>
             <p>Wenn Verbindungen abbrechen, das WLAN schwach ist oder das Internet nicht zuverlässig läuft, suchen wir die Ursache sauber heraus.</p>
             <div class="card-icon-badge" aria-hidden="true">
@@ -1179,7 +1307,7 @@
             </div>
           </article>
 
-          <article class="card service-card fade-up delay-1">
+          <article class="card service-card has-badge fade-up delay-1">
             <h3>Fernseher, Streaming & Anschlüsse</h3>
             <p>Hilfe bei Fernsehern, Streaming-Diensten, Anschlüssen und typischen Problemen rund um Technik im Haushalt.</p>
             <div class="card-icon-badge" aria-hidden="true">
@@ -1190,7 +1318,7 @@
             </div>
           </article>
 
-          <article class="card service-card fade-up delay-2">
+          <article class="card service-card has-badge fade-up delay-2">
             <h3>Kleine Reparaturen & Prüfung</h3>
             <p>Kleinere Defekte werden geprüft und wenn sinnvoll direkt behoben – ehrlich eingeschätzt und ohne unnötige Versprechen.</p>
             <div class="card-icon-badge" aria-hidden="true">
@@ -1203,7 +1331,7 @@
             </div>
           </article>
 
-          <article class="card service-card fade-up delay-3">
+          <article class="card service-card has-badge fade-up delay-3">
             <h3>Kaufberatung ohne Druck</h3>
             <p>Welche Geräte wirklich passen, was sinnvoll ist und worauf man verzichten kann – ehrlich, ruhig und bedarfsgerecht.</p>
             <div class="card-icon-badge" aria-hidden="true">
@@ -1325,7 +1453,7 @@
           </div>
 
           <div class="steps-grid">
-            <article class="card step-card fade-up delay-1">
+            <article class="card step-card has-badge fade-up delay-1">
               <div class="step-number">1</div>
               <h3>Kontakt aufnehmen</h3>
               <p class="copy">Per Telefon, WhatsApp oder E-Mail kurz melden und das Anliegen schildern. Der erste Kontakt ist kostenlos.</p>
@@ -1336,7 +1464,7 @@
               </div>
             </article>
 
-            <article class="card step-card fade-up delay-2">
+            <article class="card step-card has-badge fade-up delay-2">
               <div class="step-number">2</div>
               <h3>Problem gemeinsam einordnen</h3>
               <p class="copy">In Ruhe besprechen wir, was nicht funktioniert, was eingerichtet werden soll und wie der nächste Schritt sinnvoll aussieht.</p>
@@ -1348,7 +1476,7 @@
               </div>
             </article>
 
-            <article class="card step-card fade-up delay-3">
+            <article class="card step-card has-badge fade-up delay-3">
               <div class="step-number">3</div>
               <h3>Vor Ort unterstützen</h3>
               <p class="copy">Wir kommen vorbei, richten ein, prüfen oder lösen das Problem und erklären auf Wunsch alles Schritt für Schritt.</p>
@@ -1612,13 +1740,50 @@
         }
       });
     }, {
-      threshold: 0.15,
-      rootMargin: '0px 0px -40px 0px'
+      threshold: 0.14,
+      rootMargin: '0px 0px -36px 0px'
     });
 
     document.querySelectorAll('.fade-up').forEach((element) => {
-      if (!element.classList.contains('is-visible')) {
-        observer.observe(element);
+      observer.observe(element);
+    });
+
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('is-open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Menü öffnen');
+    }
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('is-open');
+      menuToggle.classList.add('is-open');
+      menuToggle.setAttribute('aria-expanded', 'true');
+      menuToggle.setAttribute('aria-label', 'Menü schließen');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('is-open');
+      if (isOpen) {
+        closeMobileMenu();
+      } else {
+        openMobileMenu();
+      }
+    });
+
+    mobileMenuLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        closeMobileMenu();
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) {
+        closeMobileMenu();
       }
     });
   </script>
