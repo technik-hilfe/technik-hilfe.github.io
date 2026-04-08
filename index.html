@@ -769,15 +769,11 @@
   line-height: 1.6;
 }
 
-.about-facts {
-  display: grid;
-  gap: 8px;
-  margin-top: 14px;
-  position: relative;
-  z-index: 2;
-}
-
 .about-fact {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 10px;
+  align-items: start;
   padding: 10px 12px;
   border-radius: 14px;
   background: rgba(255,255,255,0.70);
@@ -787,9 +783,13 @@
   color: var(--muted);
 }
 
-.about-fact strong {
-  color: var(--blue-dark);
+.fact-label {
   font-weight: 700;
+  color: var(--blue-dark);
+}
+
+.fact-value {
+  color: var(--muted);
 }
 
 @media (max-width: 900px) {
@@ -1151,7 +1151,7 @@
         <div class="eyebrow">Über uns</div>
         <h2>Die Menschen hinter der Technik-Hilfe.</h2>
       </div>
-      <p class="copy">Zwei feste Ansprechpartner, persönlich vor Ort und direkt erreichbar.</p>
+      <p class="copy"></p>
     </div>
 
     <div class="about-grid">
