@@ -438,7 +438,7 @@
       padding: 32px 32px 34px;
     }
 
-    .service-card::after {
+   .service-card::after {
   content: "";
   position: absolute;
   width: 112px;
@@ -449,26 +449,8 @@
   background: radial-gradient(circle, rgba(217,239,255,0.92), rgba(217,239,255,0.68));
   pointer-events: none;
 }
-    }
 
-    .card-icon-badge {
-      position: absolute;
-      right: 22px;
-      bottom: 22px;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      z-index: 2;
-      background: rgba(255,255,255,0.42);
-      backdrop-filter: blur(4px);
-      border: 1px solid rgba(19,136,255,0.10);
-      box-shadow: 0 10px 24px rgba(8,34,74,0.08);
-      color: var(--blue-dark);
-    }
-
-    .card-icon-badge {
+.card-icon-badge {
   position: absolute;
   right: 16px;
   bottom: 16px;
@@ -484,7 +466,11 @@
   box-shadow: 0 10px 24px rgba(8,34,74,0.08);
   color: var(--blue-dark);
 }
-    }
+
+.card-icon-badge svg {
+  width: 20px;
+  height: 20px;
+}
 
     .steps-wrap {
       padding: 34px;
@@ -514,12 +500,17 @@
   pointer-events: none;
 }
 
-    .step-card .card-icon-badge {
-      right: 18px;
-      bottom: 18px;
-      width: 48px;
-      height: 48px;
-    }
+.step-card .card-icon-badge {
+  right: 14px;
+  bottom: 14px;
+  width: 42px;
+  height: 42px;
+}
+
+.step-card .card-icon-badge svg {
+  width: 18px;
+  height: 18px;
+}
 
     .step-number {
       width: 48px;
