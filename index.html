@@ -3,14 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Technik-Hilfe</title>
-  <meta name="description" content="Persönliche Technik-Hilfe in Bad Füssing: Computer, Handy, WLAN, Fernseher und Technik im Alltag – ruhig erklärt, verständlich und direkt vor Ort." />
+  <title>Technik-Hilfe Bad Füssing – Persönliche Hilfe bei Computer, Handy, WLAN & Technik</title>
+  <meta
+    name="description"
+    content="Persönliche Technik-Hilfe in Bad Füssing und Umgebung: Unterstützung bei Computer, Handy, WLAN, Fernseher und Technik im Alltag – verständlich erklärt, direkt vor Ort und ohne komplizierte Fachsprache."
+  />
   <style>
     :root {
-      --bg: #f3f8fd;
+      --bg: #f4f8fd;
       --bg-2: #eef5fb;
-      --surface: rgba(255,255,255,0.74);
-      --surface-strong: rgba(255,255,255,0.9);
+      --surface: rgba(255,255,255,0.76);
+      --surface-strong: rgba(255,255,255,0.92);
       --text: #0b1f3d;
       --muted: #5a6f89;
       --line: rgba(11,31,61,0.08);
@@ -76,11 +79,11 @@
     }
 
     h1 {
-      font-size: clamp(2.9rem, 6vw, 5.8rem);
+      font-size: clamp(2.9rem, 6vw, 5.7rem);
       line-height: 0.95;
       letter-spacing: -0.055em;
-      font-weight: 750;
-      max-width: 9ch;
+      font-weight: 760;
+      max-width: 10ch;
     }
 
     h2 {
@@ -88,7 +91,7 @@
       line-height: 1.12;
       letter-spacing: -0.035em;
       font-weight: 740;
-      max-width: 14ch;
+      max-width: 16ch;
       text-wrap: balance;
     }
 
@@ -97,14 +100,13 @@
       line-height: 1.34;
       letter-spacing: -0.015em;
       font-weight: 680;
-      max-width: 22ch;
       text-wrap: balance;
     }
 
     .lead {
-      font-size: clamp(1.12rem, 2vw, 1.42rem);
+      font-size: clamp(1.08rem, 2vw, 1.4rem);
       color: var(--muted);
-      max-width: 690px;
+      max-width: 700px;
       line-height: 1.72;
       margin-top: 24px;
     }
@@ -118,18 +120,26 @@
     .site-header {
       position: sticky;
       top: 0;
-      z-index: 60;
+      z-index: 80;
       backdrop-filter: blur(18px);
-      background: rgba(249,252,255,0.72);
+      background: rgba(249,252,255,0.76);
       border-bottom: 1px solid rgba(8,34,74,0.06);
     }
 
     .header-inner {
-      min-height: 82px;
+      min-height: 92px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 26px;
+    }
+
+    .brand-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      min-width: 0;
     }
 
     .brand {
@@ -170,10 +180,34 @@
       text-overflow: ellipsis;
     }
 
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .top-nav a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 650;
+      color: var(--blue-dark);
+      background: rgba(255,255,255,0.86);
+      border: 1px solid rgba(8,34,74,0.06);
+      box-shadow: 0 8px 18px rgba(8,34,74,0.04);
+      transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
+    }
+
+    .top-nav a:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.96);
+    }
+
     .header-actions {
       display: flex;
       align-items: center;
       gap: 12px;
+      flex-shrink: 0;
     }
 
     .phone-link {
@@ -181,30 +215,30 @@
       color: var(--blue-dark);
       padding: 11px 16px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.86);
+      background: rgba(255,255,255,0.88);
       border: 1px solid rgba(8,34,74,0.07);
       box-shadow: 0 8px 20px rgba(8,34,74,0.04);
     }
 
-.whatsapp-link {
-  font-weight: 650;
-  color: #0f5132;
-  padding: 11px 16px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.92);
-  border: 1px solid rgba(89,190,52,0.20);
-  box-shadow: 0 8px 20px rgba(8,34,74,0.04);
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-}
+    .whatsapp-link {
+      font-weight: 650;
+      color: #0f5132;
+      padding: 11px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      border: 1px solid rgba(89,190,52,0.20);
+      box-shadow: 0 8px 20px rgba(8,34,74,0.04);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
 
-.whatsapp-link svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
-}
-    
+    .whatsapp-link svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -230,19 +264,19 @@
 
     .btn-secondary {
       color: var(--blue-dark);
-      background: rgba(255,255,255,0.92);
+      background: rgba(255,255,255,0.94);
       border: 1px solid rgba(8,34,74,0.08);
       box-shadow: 0 12px 24px rgba(8,34,74,0.07);
     }
 
     .hero {
-      padding: 70px 0 86px;
+      padding: 72px 0 88px;
       overflow: hidden;
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
+      grid-template-columns: 1.04fr 0.96fr;
       align-items: center;
       gap: 48px;
     }
@@ -320,10 +354,10 @@
 
     .hero-card {
       position: relative;
-      width: min(100%, 610px);
+      width: min(100%, 620px);
       padding: 28px;
       border-radius: 40px;
-      background: linear-gradient(180deg, rgba(255,255,255,0.86), rgba(255,255,255,0.70));
+      background: linear-gradient(180deg, rgba(255,255,255,0.88), rgba(255,255,255,0.72));
       border: 1px solid rgba(255,255,255,0.78);
       box-shadow: var(--shadow);
       overflow: hidden;
@@ -345,7 +379,7 @@
     .hero-logo-panel {
       position: relative;
       z-index: 2;
-      height: 450px;
+      height: 360px;
       border-radius: 34px;
       overflow: hidden;
       border: 1px solid rgba(255,255,255,0.55);
@@ -357,46 +391,57 @@
     }
 
     .hero-logo-panel img {
-      max-width: 88%;
-      max-height: 88%;
+      max-width: 82%;
+      max-height: 82%;
       width: auto;
       height: auto;
       object-fit: contain;
       display: block;
     }
 
-    .hero-caption {
+    .hero-nav-panel {
       position: relative;
       z-index: 2;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto;
-      gap: 18px;
-      align-items: center;
-      padding: 22px 24px;
       margin-top: 20px;
-      border-radius: 22px;
-      background: rgba(255,255,255,0.80);
+      padding: 24px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.82);
       border: 1px solid rgba(8,34,74,0.06);
+      display: grid;
+      gap: 14px;
     }
 
-    .hero-caption > div {
-      min-width: 0;
-    }
-
-    .hero-caption strong {
-      display: block;
-      font-size: 1.12rem;
+    .hero-nav-panel strong {
+      font-size: 1.08rem;
       line-height: 1.35;
-      margin-bottom: 6px;
-      max-width: 26ch;
       letter-spacing: -0.015em;
     }
 
-    .hero-caption span {
-      color: var(--muted);
-      font-size: 0.98rem;
-      line-height: 1.55;
-      max-width: 42ch;
+    .hero-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .hero-nav-grid a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(8,34,74,0.06);
+      color: var(--blue-dark);
+      font-weight: 660;
+      box-shadow: 0 8px 22px rgba(8,34,74,0.04);
+    }
+
+    .hero-nav-grid a svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
+      opacity: 0.9;
     }
 
     .section-head {
@@ -414,7 +459,9 @@
     .trust-grid,
     .services-grid,
     .steps-grid,
-    .contact-grid {
+    .contact-grid,
+    .pricing-grid,
+    .answers-grid {
       display: grid;
       gap: 22px;
     }
@@ -423,6 +470,8 @@
     .services-grid { grid-template-columns: repeat(3, 1fr); }
     .steps-grid { grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
     .contact-grid { grid-template-columns: 1.03fr 0.97fr; align-items: stretch; }
+    .pricing-grid { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
+    .answers-grid { grid-template-columns: repeat(2, 1fr); }
 
     .card {
       border-radius: var(--radius-lg);
@@ -432,7 +481,10 @@
     .service-card,
     .step-card,
     .contact-card,
-    .callback-card {
+    .callback-card,
+    .pricing-card,
+    .faq-card,
+    .about-card {
       padding: 30px;
     }
 
@@ -448,48 +500,58 @@
     }
 
     .trust-card p,
-    .service-card p { margin-top: 12px; color: var(--muted); }
+    .service-card p,
+    .faq-card p { margin-top: 12px; color: var(--muted); }
+
+    .service-card,
+    .step-card,
+    .faq-card,
+    .pricing-card {
+      position: relative;
+      overflow: hidden;
+    }
 
     .service-card {
       min-height: 240px;
-      position: relative;
-      overflow: hidden;
       padding: 32px 32px 34px;
     }
 
-   .service-card::after {
-  content: "";
-  position: absolute;
-  width: 112px;
-  height: 112px;
-  right: -18px;
-  bottom: -18px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,239,255,0.92), rgba(217,239,255,0.68));
-  pointer-events: none;
-}
+    .service-card::after,
+    .step-card::after,
+    .faq-card::after,
+    .pricing-card::after {
+      content: "";
+      position: absolute;
+      width: 104px;
+      height: 104px;
+      right: -18px;
+      bottom: -18px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(217,239,255,0.86), rgba(217,239,255,0.55));
+      pointer-events: none;
+    }
 
-.card-icon-badge {
-  position: absolute;
-  right: 16px;
-  bottom: 16px;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  z-index: 2;
-  background: rgba(255,255,255,0.42);
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(19,136,255,0.10);
-  box-shadow: 0 10px 24px rgba(8,34,74,0.08);
-  color: var(--blue-dark);
-}
+    .card-icon-badge {
+      position: absolute;
+      right: 16px;
+      bottom: 16px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      z-index: 2;
+      background: rgba(255,255,255,0.46);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(19,136,255,0.10);
+      box-shadow: 0 10px 24px rgba(8,34,74,0.08);
+      color: var(--blue-dark);
+    }
 
-.card-icon-badge svg {
-  width: 20px;
-  height: 20px;
-}
+    .card-icon-badge svg {
+      width: 20px;
+      height: 20px;
+    }
 
     .steps-wrap {
       padding: 34px;
@@ -501,35 +563,6 @@
       border: 1px solid rgba(8,34,74,0.06);
       box-shadow: var(--shadow);
     }
-
-    .step-card {
-      position: relative;
-      overflow: hidden;
-    }
-
-   .step-card::after {
-  content: "";
-  position: absolute;
-  width: 92px;
-  height: 92px;
-  right: -16px;
-  bottom: -16px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,239,255,0.80), rgba(217,239,255,0.52));
-  pointer-events: none;
-}
-
-.step-card .card-icon-badge {
-  right: 14px;
-  bottom: 14px;
-  width: 42px;
-  height: 42px;
-}
-
-.step-card .card-icon-badge svg {
-  width: 18px;
-  height: 18px;
-}
 
     .step-number {
       width: 48px;
@@ -546,70 +579,157 @@
       z-index: 2;
     }
 
-    .region-card {
+    .pricing-card strong.price-main {
+      display: block;
+      font-size: 2.2rem;
+      line-height: 1;
+      margin-top: 10px;
+      letter-spacing: -0.04em;
+    }
+
+    .pricing-note {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      max-width: 48ch;
+    }
+
+    .pricing-list {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      align-items: center;
-      min-height: 420px;
-      padding: 40px;
-      overflow: hidden;
+      gap: 16px;
+      margin-top: 24px;
     }
 
-    .region-copy .copy + .copy { margin-top: 16px; }
-
-    .region-water {
-      position: relative;
-      min-height: 320px;
-      border-radius: 32px;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.04)),
-        radial-gradient(circle at 25% 25%, rgba(255,255,255,0.55), transparent 20%),
-        radial-gradient(circle at 75% 35%, rgba(255,255,255,0.34), transparent 18%),
-        linear-gradient(135deg, #dff1ff 0%, #c3e2ff 36%, #e6f7e2 100%);
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.48);
+    .pricing-item {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 26px;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(8,34,74,0.06);
     }
 
-    .region-water::before,
-    .region-water::after {
+    .pricing-item .mini-icon,
+    .contact-item .mini-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      flex-shrink: 0;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, rgba(19,136,255,0.14), rgba(89,190,52,0.10));
+      color: var(--blue-dark);
+    }
+
+    .pricing-item strong,
+    .contact-item strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.98rem;
+    }
+
+    .pricing-item span,
+    .contact-item a,
+    .contact-item span {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.55;
+      word-break: break-word;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      align-items: start;
+    }
+
+    .about-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .about-card::after {
       content: "";
       position: absolute;
-      inset: auto -8% 18% -8%;
-      height: 88px;
+      width: 110px;
+      height: 110px;
+      right: -26px;
+      bottom: -26px;
       border-radius: 50%;
-      border: 2px solid rgba(255,255,255,0.34);
+      background: radial-gradient(circle, rgba(217,239,255,0.78), rgba(217,239,255,0.40));
+      pointer-events: none;
     }
 
-    .region-water::after {
-      inset: auto -8% 4% -8%;
-    }
-
-    .region-logo-box {
-      position: relative;
-      z-index: 2;
-      width: min(100%, 360px);
-      aspect-ratio: 1 / 1;
-      border-radius: 34px;
+    .about-photo {
+      width: 100%;
+      aspect-ratio: 4 / 3.1;
+      border-radius: 18px;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,0.62);
-      box-shadow: 0 20px 50px rgba(8,34,74,0.16);
-      background: rgba(255,255,255,0.18);
-      backdrop-filter: blur(6px);
+      background:
+        linear-gradient(135deg, rgba(19,136,255,0.10), rgba(89,190,52,0.10)),
+        rgba(255,255,255,0.72);
+      border: 1px solid rgba(8,34,74,0.06);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.45);
+      margin-bottom: 16px;
+      position: relative;
     }
 
-    .region-logo-box img {
+    .about-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
 
+    .about-role {
+      display: inline-block;
+      font-size: 0.88rem;
+      font-weight: 650;
+      color: var(--blue);
+      margin: 8px 0 14px;
+    }
+
+    .about-card .copy {
+      max-width: 100%;
+      font-size: 0.96rem;
+      line-height: 1.66;
+    }
+
+    .about-facts {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .about-fact {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 10px;
+      align-items: start;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.72);
+      border: 1px solid rgba(8,34,74,0.06);
+      font-size: 0.92rem;
+      line-height: 1.45;
+    }
+
+    .fact-label {
+      font-weight: 700;
+      color: var(--blue-dark);
+    }
+
+    .fact-value {
+      color: var(--muted);
+    }
+
     .contact-card,
-    .callback-card { position: relative; }
+    .callback-card {
+      position: relative;
+    }
 
     .contact-list {
       display: grid;
@@ -619,25 +739,12 @@
 
     .contact-item {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 16px;
       padding: 16px 18px;
       border-radius: 18px;
-      background: rgba(255,255,255,0.72);
+      background: rgba(255,255,255,0.74);
       border: 1px solid rgba(8,34,74,0.06);
-    }
-
-    .contact-item strong {
-      display: block;
-      margin-bottom: 3px;
-      font-size: 0.98rem;
-    }
-
-    .contact-item a,
-    .contact-item span {
-      color: var(--muted);
-      font-size: 1rem;
-      word-break: break-word;
     }
 
     .callback-card {
@@ -662,9 +769,10 @@
     }
 
     .callback-card p {
-      color: rgba(255,255,255,0.8);
+      color: rgba(255,255,255,0.82);
       margin-top: 16px;
       max-width: 42ch;
+      line-height: 1.7;
     }
 
     .callback-card .btn-secondary {
@@ -672,6 +780,35 @@
       align-self: flex-start;
       background: rgba(255,255,255,0.96);
       border: none;
+    }
+
+    .legal-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .legal-links a {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.78);
+      border: 1px solid rgba(8,34,74,0.06);
+      color: var(--blue-dark);
+      font-weight: 640;
+      font-size: 0.95rem;
+    }
+
+    .legal-card {
+      margin-top: 28px;
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.74);
+      border: 1px solid rgba(8,34,74,0.06);
+    }
+
+    .legal-card p + p {
+      margin-top: 12px;
     }
 
     .footer {
@@ -687,6 +824,7 @@
       gap: 20px;
       border-top: 1px solid rgba(8,34,74,0.08);
       padding-top: 22px;
+      flex-wrap: wrap;
     }
 
     .fade-up {
@@ -705,220 +843,154 @@
     .delay-2 { transition-delay: 160ms; }
     .delay-3 { transition-delay: 240ms; }
 
-    .about-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  align-items: start;
-}
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid rgba(19,136,255,0.42);
+      outline-offset: 3px;
+    }
 
-.about-card {
-  padding: 22px;
-  position: relative;
-  overflow: hidden;
-  min-height: 0;
-}
-
-.about-card::after {
-  content: "";
-  position: absolute;
-  width: 110px;
-  height: 110px;
-  right: -26px;
-  bottom: -26px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(217,239,255,0.78), rgba(217,239,255,0.40));
-  pointer-events: none;
-}
-
-.about-photo {
-  width: 100%;
-  aspect-ratio: 4 / 3.2;
-  border-radius: 18px;
-  overflow: hidden;
-  background:
-    linear-gradient(135deg, rgba(19,136,255,0.10), rgba(89,190,52,0.10)),
-    rgba(255,255,255,0.72);
-  border: 1px solid rgba(8,34,74,0.06);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.about-photo img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.about-photo-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: var(--muted);
-  text-align: center;
-  padding: 16px;
-  font-size: 0.92rem;
-}
-
-.about-photo-placeholder svg {
-  width: 28px;
-  height: 28px;
-  color: var(--blue-dark);
-  opacity: 0.9;
-}
-
-.about-card h3 {
-  margin-bottom: 6px;
-  font-size: 1.08rem;
-  line-height: 1.28;
-  max-width: 100%;
-}
-
-.about-role {
-  display: inline-block;
-  font-size: 0.88rem;
-  font-weight: 650;
-  color: var(--blue);
-  margin-bottom: 10px;
-}
-
-.about-card .copy {
-  max-width: 100%;
-  font-size: 0.96rem;
-  line-height: 1.6;
-}
-
-.about-fact {
-  display: grid;
-  grid-template-columns: 150px 1fr;
-  gap: 10px;
-  align-items: start;
-  padding: 10px 12px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.70);
-  border: 1px solid rgba(8,34,74,0.06);
-  font-size: 0.9rem;
-  line-height: 1.45;
-  color: var(--muted);
-}
-
-.fact-label {
-  font-weight: 700;
-  color: var(--blue-dark);
-}
-
-.fact-value {
-  color: var(--muted);
-}
-
-@media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
-}
-    
     @media (max-width: 1120px) {
       .hero-grid,
       .contact-grid,
-      .region-card { grid-template-columns: 1fr; }
+      .pricing-grid {
+        grid-template-columns: 1fr;
+      }
 
       .trust-grid,
       .services-grid,
-      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+      .steps-grid,
+      .answers-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
 
       .hero-stage { min-height: auto; }
       .section { padding: 88px 0; }
-      .section-head { align-items: flex-start; flex-direction: column; }
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 18px 0;
+      }
+
+      .header-actions {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 760px) {
       .container { width: min(calc(100% - 28px), var(--max)); }
 
-      .header-inner {
-        padding: 14px 0;
-        align-items: flex-start;
+      .header-actions,
+      .hero-actions {
+        width: 100%;
         flex-direction: column;
       }
 
-      .header-actions,
-      .hero-actions { width: 100%; flex-direction: column; }
-
       .phone-link,
+      .whatsapp-link,
       .header-actions .btn,
       .hero-actions .btn,
-      .btn { width: 100%; }
+      .btn {
+        width: 100%;
+      }
 
+      .top-nav,
+      .hero-nav-grid,
       .hero-points,
       .trust-grid,
       .services-grid,
-      .steps-grid { grid-template-columns: 1fr; }
-
-      .hero-card,
-      .steps-wrap,
-      .region-card,
-      .contact-card,
-      .callback-card { padding: 24px; }
-
-      .hero-logo-panel {
-        height: 300px;
-      }
-
-      .hero-caption {
+      .steps-grid,
+      .answers-grid {
         grid-template-columns: 1fr;
       }
 
-      .hero-caption svg {
-        justify-self: flex-start;
+      .top-nav {
+        display: grid;
       }
 
-      .footer-inner { flex-direction: column; align-items: flex-start; }
-
-      h2 {
-        max-width: 100%;
+      .hero-card,
+      .steps-wrap,
+      .contact-card,
+      .callback-card,
+      .pricing-card,
+      .faq-card,
+      .about-card {
+        padding: 24px;
       }
 
+      .hero-logo-panel {
+        height: 280px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      h2,
       h3 {
         max-width: 100%;
+      }
+
+      .about-fact {
+        grid-template-columns: 1fr;
       }
     }
 
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       .fade-up { opacity: 1; transform: none; transition: none; }
-      .btn { transition: none; }
+      .btn,
+      .top-nav a { transition: none; }
     }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Zur Startseite">
-        <div class="brand-mark" aria-hidden="true">
-          <img src="logo.png" alt="Technik-Hilfe Logo" />
-        </div>
-        <div>
-          <div class="brand-title">Technik-Hilfe Bad Füssing</div>
-          <div class="brand-subtitle">Persönlich vor Ort. Ruhig erklärt.</div>
-        </div>
-      </a>
-     <div class="header-actions">
-  <a class="phone-link" href="tel:015785082458">015785082458</a>
+      <div class="brand-wrap">
+        <a class="brand" href="#top" aria-label="Zur Startseite">
+          <div class="brand-mark" aria-hidden="true">
+            <img src="logo.png" alt="Technik-Hilfe Logo" width="400" height="400" />
+          </div>
+          <div>
+            <div class="brand-title">Technik-Hilfe Bad Füssing</div>
+            <div class="brand-subtitle">Persönlich vor Ort. Ruhig erklärt.</div>
+          </div>
+        </a>
 
-  <a class="whatsapp-link" href="https://wa.me/4915785082458" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp öffnen">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 11.8C20 16.1 16.4 19.6 12 19.6C10.7 19.6 9.5 19.3 8.4 18.7L4.5 19.8L5.7 16.1C5 14.9 4.6 13.4 4.6 11.8C4.6 7.5 8.1 4 12.4 4C16.5 4 20 7.5 20 11.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-      <path d="M9.5 9.2C9.3 9.2 9.1 9.3 9 9.5C8.8 9.8 8.5 10.2 8.5 10.8C8.5 11.5 9 12.3 9.1 12.4C9.2 12.6 10.3 14.2 11.9 14.9C13.2 15.4 13.5 15.3 13.9 15.2C14.2 15.1 14.9 14.5 15 14.1C15.2 13.8 15.2 13.5 15.1 13.4C15 13.3 14.8 13.2 14.5 13L13.8 12.7C13.6 12.6 13.4 12.6 13.3 12.8L13 13.2C12.9 13.3 12.7 13.3 12.6 13.2C12.2 13 11.2 12.4 10.5 11.2C10.4 11.1 10.5 11 10.6 10.9L10.9 10.5C11 10.4 11 10.2 10.9 10L10.6 9.3C10.5 9.1 10.3 9.2 10.1 9.2H9.5Z" fill="currentColor"/>
-    </svg>
-    WhatsApp
-  </a>
+        <nav class="top-nav" aria-label="Hauptnavigation">
+          <a href="#leistungen">Leistungen</a>
+          <a href="#preise">Preise</a>
+          <a href="#ablauf">Ablauf</a>
+          <a href="#ueber-uns">Über uns</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+      </div>
 
-  <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
-</div>
+      <div class="header-actions">
+        <a class="phone-link" href="tel:015785082458">015785082458</a>
+
+        <a class="whatsapp-link" href="https://wa.me/4915785082458" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp öffnen">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 11.8C20 16.1 16.4 19.6 12 19.6C10.7 19.6 9.5 19.3 8.4 18.7L4.5 19.8L5.7 16.1C5 14.9 4.6 13.4 4.6 11.8C4.6 7.5 8.1 4 12.4 4C16.5 4 20 7.5 20 11.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M9.5 9.2C9.3 9.2 9.1 9.3 9 9.5C8.8 9.8 8.5 10.2 8.5 10.8C8.5 11.5 9 12.3 9.1 12.4C9.2 12.6 10.3 14.2 11.9 14.9C13.2 15.4 13.5 15.3 13.9 15.2C14.2 15.1 14.9 14.5 15 14.1C15.2 13.8 15.2 13.5 15.1 13.4C15 13.3 14.8 13.2 14.5 13L13.8 12.7C13.6 12.6 13.4 12.6 13.3 12.8L13 13.2C12.9 13.3 12.7 13.3 12.6 13.2C12.2 13 11.2 12.4 10.5 11.2C10.4 11.1 10.5 11 10.6 10.9L10.9 10.5C11 10.4 11 10.2 10.9 10L10.6 9.3C10.5 9.1 10.3 9.2 10.1 9.2H9.5Z" fill="currentColor"/>
+          </svg>
+          WhatsApp
+        </a>
+
+        <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
+      </div>
     </div>
   </header>
 
@@ -927,45 +999,82 @@
       <div class="container hero-grid">
         <div class="fade-up is-visible">
           <div class="eyebrow">Technik-Hilfe in Bad Füssing</div>
-          <h1>Technik, wieder einfach</h1>
-          <p class="lead">Wir helfen bei Computer, Handy, WLAN, Fernseher und Technik im Alltag – ruhig, verständlich und direkt vor Ort.</p>
+          <h1>Wenn Technik stört, helfen wir weiter.</h1>
+          <p class="lead">
+            Persönliche Unterstützung bei Computer, Handy, WLAN, Fernseher und Technik im Alltag – verständlich erklärt, direkt vor Ort und ohne unnötige Fachsprache.
+          </p>
+
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#kontakt">Jetzt Hilfe anfragen</a>
+            <a class="btn btn-primary" href="#kontakt">Kostenlos Kontakt aufnehmen</a>
             <a class="btn btn-secondary" href="tel:015785082458">Direkt anrufen</a>
           </div>
+
           <div class="hero-points">
             <div class="mini-card">
               <strong>Persönlich</strong>
-              <span>Hilfe von Mensch zu Mensch, direkt in der Region.</span>
+              <span>Keine Hotline, kein Weiterreichen – direkter Kontakt mit echten Ansprechpartnern.</span>
             </div>
             <div class="mini-card">
               <strong>Verständlich</strong>
-              <span>Alles wird verständlich erklärt.</span>
+              <span>Alles wird klar erklärt, damit Sie wissen, was gemacht wird und warum.</span>
             </div>
             <div class="mini-card">
               <strong>Vor Ort</strong>
-              <span>Unterstützung in Bad Füssing und Umgebung.</span>
+              <span>Hilfe direkt in Bad Füssing und Umgebung – auch bei kleinen Alltagsproblemen.</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-stage fade-up delay-1 is-visible" aria-hidden="true">
+        <div class="hero-stage fade-up delay-1 is-visible">
           <div class="orb one"></div>
           <div class="orb two"></div>
+
           <div class="hero-card">
-            <div class="hero-logo-panel">
-              <img src="logo.png" alt="Technik-Hilfe Bad Füssing Logo" />
+            <div class="hero-logo-panel" aria-hidden="true">
+              <img src="logo.png" alt="" width="700" height="700" />
             </div>
+
             <div class="hero-wave"></div>
-            <div class="hero-caption">
-              <div>
-                <strong>Moderne Hilfe mit Ruhe und Klarheit</strong>
-                <span>Vertrauensvoll, freundlich und auf das Wesentliche konzentriert.</span>
+
+            <div class="hero-nav-panel">
+              <strong>Schnell zum richtigen Bereich</strong>
+              <div class="hero-nav-grid" aria-label="Schnellnavigation">
+                <a href="#kontakt">
+                  Kontakt
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="#ueber-uns">
+                  Über uns
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="#leistungen">
+                  Leistungen
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="#preise">
+                  Preise
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+                <a href="#ablauf">
+                  Ablauf
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
               </div>
-              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M5 12H19" stroke="#0D2F5F" stroke-width="1.8" stroke-linecap="round"/>
-                <path d="M13 6L19 12L13 18" stroke="#0D2F5F" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
             </div>
           </div>
         </div>
@@ -977,9 +1086,11 @@
         <div class="section-head fade-up">
           <div>
             <div class="eyebrow">Vertrauen & Klarheit</div>
-            <h2>Verlässliche Hilfe.</h2>
+            <h2>Hilfe, die verständlich bleibt.</h2>
           </div>
-          <p class="copy"></p>
+          <p class="copy">
+            Viele Menschen möchten keine komplizierte Technikberatung, sondern jemanden, der ruhig hilft, ehrlich antwortet und Probleme zuverlässig löst. Genau darauf ist unser Auftritt ausgelegt.
+          </p>
         </div>
 
         <div class="trust-grid">
@@ -990,7 +1101,7 @@
               </svg>
             </div>
             <h3>Persönlich vor Ort</h3>
-            <p>Direkte Unterstützung in Bad Füssing und Umgebung.</p>
+            <p>Direkte Unterstützung in Bad Füssing und Umgebung – ohne anonyme Hotline und ohne langes Hin und Her.</p>
           </article>
 
           <article class="card trust-card fade-up delay-2">
@@ -1002,7 +1113,7 @@
               </svg>
             </div>
             <h3>Geduldig erklärt</h3>
-            <p>Fragen sind jederzeit willkommen. Jeder Schritt wird ruhig und verständlich erklärt.</p>
+            <p>Es wird nicht vorausgesetzt, dass Sie technisch fit sind. Jeder Schritt wird in Ruhe erklärt – verständlich und ohne Druck.</p>
           </article>
 
           <article class="card trust-card fade-up delay-3">
@@ -1013,27 +1124,29 @@
                 <path d="M6 16H12" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
               </svg>
             </div>
-            <h3>Ohne Fachsprache</h3>
-            <p>Klare Worte statt komplizierter Begriffe – damit Technik wieder einfacher wird.</p>
+            <h3>Ohne unnötige Umwege</h3>
+            <p>Klare Einschätzung, faire Kommunikation und Unterstützung auch dann, wenn es nur um eine kleine Frage oder ein überschaubares Problem geht.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="leistungen">
       <div class="container">
         <div class="section-head fade-up">
           <div>
             <div class="eyebrow">Leistungen</div>
-            <h2>Unsere Themen</h2>
+            <h2>Wobei wir konkret helfen</h2>
           </div>
-          <p class="copy"></p>
+          <p class="copy">
+            Nicht Technik um der Technik willen, sondern praktische Hilfe im Alltag – dann, wenn etwas nicht funktioniert, eingerichtet werden soll oder Unsicherheit besteht.
+          </p>
         </div>
 
         <div class="services-grid">
           <article class="card service-card fade-up delay-1">
             <h3>Computer & Laptop Hilfe</h3>
-            <p>Wenn der Computer langsam ist, etwas nicht mehr funktioniert oder Unsicherheit bei der Bedienung besteht.</p>
+            <p>Wenn der Computer langsam ist, Programme nicht richtig laufen oder bei der Bedienung Unsicherheit besteht.</p>
             <div class="card-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="5" width="16" height="11" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
@@ -1043,8 +1156,8 @@
           </article>
 
           <article class="card service-card fade-up delay-2">
-            <h3>Handy & Tablet Einrichtung</h3>
-            <p>Einrichten neuer Geräte, Übertragen wichtiger Daten und Hilfe bei den richtigen Einstellungen.</p>
+            <h3>Handy & Tablet einrichten</h3>
+            <p>Neue Geräte verständlich einrichten, wichtige Daten übertragen und sinnvolle Einstellungen gemeinsam festlegen.</p>
             <div class="card-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="7" y="3.5" width="10" height="17" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
@@ -1055,7 +1168,7 @@
 
           <article class="card service-card fade-up delay-3">
             <h3>WLAN & Internet Probleme</h3>
-            <p>Wenn das Internet instabil ist oder das WLAN nicht zuverlässig funktioniert, wird die Ursache sauber gefunden.</p>
+            <p>Wenn Verbindungen abbrechen, das WLAN schwach ist oder das Internet nicht zuverlässig läuft, suchen wir die Ursache sauber heraus.</p>
             <div class="card-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M4.5 9.5C8.8 5.8 15.2 5.8 19.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -1067,8 +1180,8 @@
           </article>
 
           <article class="card service-card fade-up delay-1">
-            <h3>Fernseher & Technik</h3>
-            <p>Unterstützung bei Fernsehern, Streaming, Anschlüssen und weiterer Technik im Haushalt.</p>
+            <h3>Fernseher, Streaming & Anschlüsse</h3>
+            <p>Hilfe bei Fernsehern, Streaming-Diensten, Anschlüssen und typischen Problemen rund um Technik im Haushalt.</p>
             <div class="card-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3.5" y="5.5" width="17" height="10" rx="2.2" stroke="currentColor" stroke-width="1.8"/>
@@ -1078,8 +1191,8 @@
           </article>
 
           <article class="card service-card fade-up delay-2">
-            <h3>Akku-Tausch & kleine Reparaturen</h3>
-            <p>Kleinere Defekte werden geprüft und, wenn sinnvoll, direkt und unkompliziert behoben.</p>
+            <h3>Kleine Reparaturen & Prüfung</h3>
+            <p>Kleinere Defekte werden geprüft und wenn sinnvoll direkt behoben – ehrlich eingeschätzt und ohne unnötige Versprechen.</p>
             <div class="card-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="4" y="7" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.8"/>
@@ -1091,8 +1204,8 @@
           </article>
 
           <article class="card service-card fade-up delay-3">
-            <h3>Kaufberatung</h3>
-            <p>Hilfe bei der Auswahl passender Geräte – ehrlich, verständlich und ohne unnötige Extras.</p>
+            <h3>Kaufberatung ohne Druck</h3>
+            <p>Welche Geräte wirklich passen, was sinnvoll ist und worauf man verzichten kann – ehrlich, ruhig und bedarfsgerecht.</p>
             <div class="card-icon-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 7H18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
@@ -1105,22 +1218,117 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="preise">
+      <div class="container pricing-grid">
+        <div class="card pricing-card fade-up">
+          <div class="eyebrow">Preise</div>
+          <h2>Klare Kosten. Ohne unnötige Unsicherheit.</h2>
+          <p class="copy" style="margin-top: 18px; max-width: 58ch;">
+            Gerade bei persönlicher Hilfe ist Transparenz wichtig. Deshalb sagen wir offen, wie sich unsere Preise zusammensetzen – ruhig, nachvollziehbar und ohne versteckte Hürden.
+          </p>
+
+          <div class="pricing-list">
+            <div class="pricing-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5 4H9L11 9L8.5 10.5C9.7 13 11.7 15 14.2 16.2L15.7 13.7L20.7 15.7V20C20.7 20.6 20.2 21 19.7 21C11.6 21 5 14.4 5 6.3C5 5.8 5.4 5.3 6 5.3L5 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Kontakt & Telefonat sind kostenlos</strong>
+                <span>Sie können sich jederzeit unverbindlich melden. Das erste Kontaktieren und ein kurzes Telefonat kosten nichts.</span>
+              </div>
+            </div>
+
+            <div class="pricing-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M12 8V12L14.8 14.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>30 Euro pro Stunde</strong>
+                <span>Die Unterstützung vor Ort berechnen wir mit 30 Euro pro Stunde. So bleibt die Preislogik einfach und nachvollziehbar.</span>
+              </div>
+            </div>
+
+            <div class="pricing-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 16L6 9H16L19 16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <path d="M7 16H15" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  <circle cx="7.5" cy="17.5" r="1.5" fill="currentColor"/>
+                  <circle cx="15.5" cy="17.5" r="1.5" fill="currentColor"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Anfahrt je nach Entfernung</strong>
+                <span>Die Anfahrt richtet sich nach der Entfernung. Vorab wird offen besprochen, was ungefähr auf Sie zukommt.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card pricing-card fade-up delay-1">
+          <div class="eyebrow">Gut zu wissen</div>
+          <h3 style="font-size: clamp(1.8rem, 3vw, 2.5rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 14ch;">
+            Faire Hilfe muss nicht kompliziert sein.
+          </h3>
+
+          <strong class="price-main">30 € / Stunde</strong>
+          <p class="pricing-note">
+            Viele Anfragen beginnen mit einer kleinen Unsicherheit: Ist mein Problem zu klein? Lohnt sich ein Anruf überhaupt? Die Antwort ist klar – ja. Auch kleinere Anliegen dürfen angesprochen werden.
+          </p>
+
+          <div class="pricing-list">
+            <div class="pricing-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M8.5 8.5C8.5 7.1 9.9 6 12 6C14.1 6 15.5 7.1 15.5 8.5C15.5 11.5 8.5 10 8.5 13.2C8.5 14.7 10 16 12 16C14 16 15.5 14.8 15.5 13.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Keine versteckten Einstiegskosten</strong>
+                <span>Erst melden, kurz sprechen, dann gemeinsam entscheiden. Das nimmt Druck raus und schafft Klarheit.</span>
+              </div>
+            </div>
+
+            <div class="pricing-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 12.5L10 16.5L18 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Auch kleine Fragen sind willkommen</strong>
+                <span>Nicht jedes Anliegen ist ein großer Notfall. Genau deshalb soll der erste Schritt leicht und unkompliziert sein.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ablauf">
       <div class="container">
         <div class="steps-wrap fade-up">
           <div class="section-head" style="margin-bottom: 0;">
             <div>
               <div class="eyebrow">So arbeiten wir</div>
-              <h2>Unser Ablauf</h2>
+              <h2>Einfacher Ablauf ohne Hürden</h2>
             </div>
-            <p class="copy"></p>
+            <p class="copy">
+              Keine komplizierten Prozesse – nur ein klarer Weg von der ersten Frage bis zur passenden Unterstützung vor Ort.
+            </p>
           </div>
 
           <div class="steps-grid">
             <article class="card step-card fade-up delay-1">
               <div class="step-number">1</div>
               <h3>Kontakt aufnehmen</h3>
-              <p class="copy">Per Telefon oder E-Mail kurz melden und sagen, wobei Unterstützung gebraucht wird.</p>
+              <p class="copy">Per Telefon, WhatsApp oder E-Mail kurz melden und das Anliegen schildern. Der erste Kontakt ist kostenlos.</p>
               <div class="card-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 4H9L11 9L8.5 10.5C9.7 13 11.7 15 14.2 16.2L15.7 13.7L20.7 15.7V20C20.7 20.6 20.2 21 19.7 21C11.6 21 5 14.4 5 6.3C5 5.8 5.4 5.3 6 5.3L5 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
@@ -1130,21 +1338,20 @@
 
             <article class="card step-card fade-up delay-2">
               <div class="step-number">2</div>
-              <h3>Problem erklären</h3>
-              <p class="copy">Gemeinsam wird in Ruhe besprochen, was nicht funktioniert oder was eingerichtet werden soll.</p>
+              <h3>Problem gemeinsam einordnen</h3>
+              <p class="copy">In Ruhe besprechen wir, was nicht funktioniert, was eingerichtet werden soll und wie der nächste Schritt sinnvoll aussieht.</p>
               <div class="card-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 20V10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
-                  <path d="M8 14L12 10L16 14" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M4 20H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                  <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="4" y="5" width="16" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/>
                 </svg>
               </div>
             </article>
 
             <article class="card step-card fade-up delay-3">
               <div class="step-number">3</div>
-              <h3>Wir kommen vorbei</h3>
-              <p class="copy">Vor Ort wird die Technik eingerichtet, geprüft oder wieder zuverlässig zum Laufen gebracht.</p>
+              <h3>Vor Ort unterstützen</h3>
+              <p class="copy">Wir kommen vorbei, richten ein, prüfen oder lösen das Problem und erklären auf Wunsch alles Schritt für Schritt.</p>
               <div class="card-icon-badge" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M3 16L6 9H16L19 16" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
@@ -1161,92 +1368,126 @@
 
     <section class="section">
       <div class="container">
-        <div class="card region-card fade-up">
-          <div class="region-copy">
-            <div class="eyebrow">Bad Füssing</div>
-            <h2>Regional verwurzelt. Modern im Auftritt.</h2>
-            <p class="copy"></p>
-            <p class="copy"></p>
+        <div class="section-head fade-up">
+          <div>
+            <div class="eyebrow">Fragen & Einwände</div>
+            <h2>Antworten, bevor Unsicherheit entsteht</h2>
           </div>
-          <div class="region-water" aria-hidden="true">
-            <div class="region-logo-box">
-              <img src="logo.png" alt="Technik-Hilfe Logo" />
-            </div>
-          </div>
+          <p class="copy">
+            Gute Seiten nehmen Zweifel nicht hin, sondern lösen sie. Deshalb beantworten wir die wichtigsten Fragen direkt und klar.
+          </p>
+        </div>
+
+        <div class="answers-grid">
+          <article class="card faq-card fade-up delay-1">
+            <h3>Ist mein Problem vielleicht zu klein?</h3>
+            <p>Nein. Auch kleine Fragen, Unsicherheiten oder alltägliche Technikprobleme sind berechtigte Anliegen und dürfen unkompliziert angesprochen werden.</p>
+          </article>
+
+          <article class="card faq-card fade-up delay-2">
+            <h3>Muss ich mich mit Technik auskennen?</h3>
+            <p>Nein. Es wird nichts vorausgesetzt. Alles wird so erklärt, dass man auch ohne technische Vorkenntnisse gut folgen kann.</p>
+          </article>
+
+          <article class="card faq-card fade-up delay-1">
+            <h3>Kommt wirklich jemand persönlich vorbei?</h3>
+            <p>Ja. Die Hilfe ist auf persönlichen Kontakt in Bad Füssing und Umgebung ausgelegt – direkt vor Ort und ohne unnötige Umwege.</p>
+          </article>
+
+          <article class="card faq-card fade-up delay-2">
+            <h3>Wie sieht es mit den Kosten aus?</h3>
+            <p>Der erste Kontakt und ein kurzes Telefonat sind kostenlos. Danach gilt eine einfache Preislogik: 30 Euro pro Stunde plus Anfahrt je nach Entfernung.</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section">
-  <div class="container">
-    <div class="section-head fade-up">
-      <div>
-        <div class="eyebrow">Über uns</div>
-        <h2>Die Menschen dahinter</h2>
+    <section class="section" id="ueber-uns">
+      <div class="container">
+        <div class="section-head fade-up">
+          <div>
+            <div class="eyebrow">Über uns</div>
+            <h2>Die Menschen dahinter</h2>
+          </div>
+          <p class="copy">
+            Vertrauen entsteht nicht nur durch gutes Design, sondern vor allem durch echte Ansprechpartner. Deshalb zeigen wir klar, wer hinter Technik-Hilfe Bad Füssing steht.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <article class="card about-card fade-up delay-1">
+            <div class="about-photo">
+              <img src="moritz.jpg" alt="Moritz Bruckmeier" width="1200" height="900" loading="lazy" />
+            </div>
+
+            <h3>Moritz Bruckmeier</h3>
+            <div class="about-role">Technik-Hilfe / Geschäftsführer</div>
+            <p class="copy">
+              Moritz steht für ruhige, klare Unterstützung direkt beim Kunden. Der Fokus liegt darauf, Probleme verständlich zu lösen und Menschen bei Technik nicht zusätzlich unter Druck zu setzen.
+            </p>
+
+            <div class="about-facts">
+              <div class="about-fact">
+                <span class="fact-label">Karriere</span>
+                <span class="fact-value">Fachinformatiker Systemintegration</span>
+              </div>
+              <div class="about-fact">
+                <span class="fact-label">Alter</span>
+                <span class="fact-value">21</span>
+              </div>
+              <div class="about-fact">
+                <span class="fact-label">Interessen</span>
+                <span class="fact-value">Technik, Sport, Motorräder</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="card about-card fade-up delay-2">
+            <div class="about-photo">
+              <img src="elias.jpg" alt="Elias Bruckmeier" width="1200" height="900" loading="lazy" />
+            </div>
+
+            <h3>Elias Bruckmeier</h3>
+            <div class="about-role">Technik-Hilfe / Geschäftsführer</div>
+            <p class="copy">
+              Elias verbindet technisches Verständnis mit einem nahbaren, persönlichen Auftreten. Ziel ist immer eine Unterstützung, die nicht überfordert, sondern Sicherheit im Alltag schafft.
+            </p>
+
+            <div class="about-facts">
+              <div class="about-fact">
+                <span class="fact-label">Karriere</span>
+                <span class="fact-value">Ausbildung zum Fachinformatiker Daten- und Prozessanalyse</span>
+              </div>
+              <div class="about-fact">
+                <span class="fact-label">Alter</span>
+                <span class="fact-value">18</span>
+              </div>
+              <div class="about-fact">
+                <span class="fact-label">Interessen</span>
+                <span class="fact-value">Technik, Fußball, Motorräder</span>
+              </div>
+            </div>
+          </article>
+        </div>
       </div>
-      <p class="copy"></p>
-    </div>
+    </section>
 
-    <div class="about-grid">
-      <article class="card about-card fade-up delay-1">
-        <div class="about-photo" aria-hidden="true">
-          <div class="about-photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M5 20C6.4 16.9 8.8 15.5 12 15.5C15.2 15.5 17.6 16.9 19 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            <span>Platzhalter für Foto 1</span>
-          </div>
-        </div>
-
-        <h3>Moritz Bruckmeier</h3>
-        <div class="about-role">Technik-Hilfe / Geschäftsführer</div>
-        <p class="copy"></p>
-
-        <div class="about-facts">
-          <div class="about-fact"><strong>Karriere</strong>Fachinformatiker Systemintegration</div>
-          <div class="about-fact"><strong>Alter:</strong>21</div>
-          <div class="about-fact"><strong>Meine Interessen:</strong>Technik, Sport, Motorräder</div>
-        </div>
-      </article>
-
-      <article class="card about-card fade-up delay-2">
-        <div class="about-photo" aria-hidden="true">
-          <div class="about-photo-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.8"/>
-              <path d="M5 20C6.4 16.9 8.8 15.5 12 15.5C15.2 15.5 17.6 16.9 19 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-            <span>Platzhalter für Foto 2</span>
-          </div>
-        </div>
-
-        <h3>Elias Bruckmeier</h3>
-        <div class="about-role">Technik-Hilfe / Geschäftsführer</div>
-        <p class="copy"></p>
-
-        <div class="about-facts">
-          <div class="about-fact"><strong>Karriere:</strong>Ausbildung zum Fachinformatiker Daten/Prozessanalyse</div>
-          <div class="about-fact"><strong>Alter:</strong>18</div>
-          <div class="about-fact"><strong>Meine Interessen:</strong>Technik, Fussball, Motorräder</div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-    
     <section class="section" id="kontakt">
       <div class="container contact-grid">
         <div class="card contact-card fade-up">
           <div class="eyebrow">Kontakt</div>
-          <h2>Einfach melden. Wir kümmern uns darum.</h2>
-          <p class="copy" style="margin-top: 18px; max-width: 56ch;">Ob kleine Frage, neue Einrichtung oder akutes Problem.</p>
-          <p class="copy" style="margin-top: 18px; max-width: 56ch;">Kurz melden, Anliegen schildern und gemeinsam die passende Lösung finden.</p>
+          <h2>Einfach melden. Der erste Schritt ist kostenlos.</h2>
+          <p class="copy" style="margin-top: 18px; max-width: 58ch;">
+            Ob kleine Frage, neue Einrichtung oder akutes Problem: Das Kontaktieren und ein erstes kurzes Telefonat sind kostenlos. Danach besprechen wir offen, wie es weitergeht.
+          </p>
+          <p class="copy" style="margin-top: 14px; max-width: 58ch;">
+            Auch wenn Sie nicht sicher sind, ob Ihr Anliegen „groß genug“ ist: lieber kurz melden als weiter ärgern.
+          </p>
 
           <div class="contact-list">
             <div class="contact-item">
-              <div class="icon" style="margin:0; width:44px; height:44px; border-radius:14px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5 4H9L11 9L8.5 10.5C9.7 13 11.7 15 14.2 16.2L15.7 13.7L20.7 15.7V20C20.7 20.6 20.2 21 19.7 21C11.6 21 5 14.4 5 6.3C5 5.8 5.4 5.3 6 5.3L5 4Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
                 </svg>
               </div>
@@ -1256,22 +1497,22 @@
               </div>
             </div>
 
-<div class="contact-item">
-  <div class="icon" style="margin:0; width:44px; height:44px; border-radius:14px;">
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M20 11.8C20 16.1 16.4 19.6 12 19.6C10.7 19.6 9.5 19.3 8.4 18.7L4.5 19.8L5.7 16.1C5 14.9 4.6 13.4 4.6 11.8C4.6 7.5 8.1 4 12.4 4C16.5 4 20 7.5 20 11.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
-      <path d="M9.5 9.2C9.3 9.2 9.1 9.3 9 9.5C8.8 9.8 8.5 10.2 8.5 10.8C8.5 11.5 9 12.3 9.1 12.4C9.2 12.6 10.3 14.2 11.9 14.9C13.2 15.4 13.5 15.3 13.9 15.2C14.2 15.1 14.9 14.5 15 14.1C15.2 13.8 15.2 13.5 15.1 13.4C15 13.3 14.8 13.2 14.5 13L13.8 12.7C13.6 12.6 13.4 12.6 13.3 12.8L13 13.2C12.9 13.3 12.7 13.3 12.6 13.2C12.2 13 11.2 12.4 10.5 11.2C10.4 11.1 10.5 11 10.6 10.9L10.9 10.5C11 10.4 11 10.2 10.9 10L10.6 9.3C10.5 9.1 10.3 9.2 10.1 9.2H9.5Z" fill="currentColor"/>
-    </svg>
-  </div>
-  <div>
-    <strong>WhatsApp</strong>
-    <a href="https://wa.me/4915785082458" target="_blank" rel="noopener noreferrer">Nachricht schreiben</a>
-  </div>
-</div>
-            
             <div class="contact-item">
-              <div class="icon" style="margin:0; width:44px; height:44px; border-radius:14px;">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M20 11.8C20 16.1 16.4 19.6 12 19.6C10.7 19.6 9.5 19.3 8.4 18.7L4.5 19.8L5.7 16.1C5 14.9 4.6 13.4 4.6 11.8C4.6 7.5 8.1 4 12.4 4C16.5 4 20 7.5 20 11.8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                  <path d="M9.5 9.2C9.3 9.2 9.1 9.3 9 9.5C8.8 9.8 8.5 10.2 8.5 10.8C8.5 11.5 9 12.3 9.1 12.4C9.2 12.6 10.3 14.2 11.9 14.9C13.2 15.4 13.5 15.3 13.9 15.2C14.2 15.1 14.9 14.5 15 14.1C15.2 13.8 15.2 13.5 15.1 13.4C15 13.3 14.8 13.2 14.5 13L13.8 12.7C13.6 12.6 13.4 12.6 13.3 12.8L13 13.2C12.9 13.3 12.7 13.3 12.6 13.2C12.2 13 11.2 12.4 10.5 11.2C10.4 11.1 10.5 11 10.6 10.9L10.9 10.5C11 10.4 11 10.2 10.9 10L10.6 9.3C10.5 9.1 10.3 9.2 10.1 9.2H9.5Z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div>
+                <strong>WhatsApp</strong>
+                <a href="https://wa.me/4915785082458" target="_blank" rel="noopener noreferrer">Nachricht schreiben</a>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M4 7L12 13L20 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
                   <rect x="4" y="5" width="16" height="14" rx="3" stroke="currentColor" stroke-width="1.7"/>
                 </svg>
@@ -1281,16 +1522,74 @@
                 <a href="mailto:technik.hilfe.badfuessing@gmail.com">technik.hilfe.badfuessing@gmail.com</a>
               </div>
             </div>
+
+            <div class="contact-item">
+              <div class="mini-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/>
+                  <path d="M12 8V12L14.8 14.3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <strong>Kosten im Überblick</strong>
+                <span>Erster Kontakt kostenlos, 30 Euro pro Stunde, Anfahrt je nach Entfernung.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="legal-links">
+            <a href="#impressum">Impressum</a>
+            <a href="#datenschutz">Datenschutz</a>
           </div>
         </div>
 
         <div class="card callback-card fade-up delay-1">
           <div>
             <div class="eyebrow" style="color: rgba(255,255,255,0.84);">Rückruf</div>
-            <h3 style="font-size: clamp(1.8rem, 3vw, 2.45rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 16ch;">Lieber erst kurz zurückgerufen werden?</h3>
-            <p>Auch das geht ganz einfach. Eine kurze Nachricht mit Ihrer Telefonnummer genügt, und wir rufen Sie auf schnellstem Wege zurück.</p>
+            <h3 style="font-size: clamp(1.8rem, 3vw, 2.45rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 16ch;">
+              Lieber erst kurz zurückgerufen werden?
+            </h3>
+            <p>
+              Auch das geht unkompliziert. Eine kurze Nachricht mit Ihrer Telefonnummer genügt, und wir melden uns schnellstmöglich zurück.
+            </p>
+            <p>
+              Der Rückruf dient dazu, das Anliegen kurz einzuordnen und den passenden nächsten Schritt gemeinsam zu besprechen.
+            </p>
           </div>
           <a class="btn btn-secondary" href="mailto:technik.hilfe.badfuessing@gmail.com?subject=Bitte%20um%20R%C3%BCckruf">Rückruf anfordern</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="impressum" style="padding-top: 20px;">
+      <div class="container">
+        <div class="card legal-card fade-up">
+          <div class="eyebrow">Impressum</div>
+          <p class="copy"><strong>Technik-Hilfe Bad Füssing</strong></p>
+          <p class="copy">Moritz Bruckmeier & Elias Bruckmeier</p>
+          <p class="copy">Bad Füssing, Bayern</p>
+          <p class="copy">Telefon: <a href="tel:015785082458">015785082458</a></p>
+          <p class="copy">E-Mail: <a href="mailto:technik.hilfe.badfuessing@gmail.com">technik.hilfe.badfuessing@gmail.com</a></p>
+          <p class="copy">
+            Hinweis: Bitte vollständige ladungsfähige Anschrift, Vertretungsberechtigte und weitere rechtlich nötige Angaben vor Veröffentlichung ergänzen.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="datenschutz" style="padding-top: 20px;">
+      <div class="container">
+        <div class="card legal-card fade-up">
+          <div class="eyebrow">Datenschutz</div>
+          <p class="copy">
+            Wenn Sie per Telefon, E-Mail oder WhatsApp Kontakt aufnehmen, werden die von Ihnen übermittelten Daten ausschließlich zur Bearbeitung Ihrer Anfrage verwendet.
+          </p>
+          <p class="copy">
+            Eine Weitergabe an Dritte erfolgt nicht ohne rechtliche Grundlage oder Ihre ausdrückliche Zustimmung.
+          </p>
+          <p class="copy">
+            Bitte ergänzen Sie vor der Veröffentlichung noch eine vollständige Datenschutzerklärung mit allen tatsächlich eingesetzten Diensten, Kontaktwegen und rechtlich erforderlichen Angaben.
+          </p>
         </div>
       </div>
     </section>
@@ -1299,7 +1598,8 @@
   <footer class="footer">
     <div class="container footer-inner">
       <span>Technik-Hilfe Bad Füssing</span>
-      <span>Persönliche Unterstützung für Technik im Alltag</span>
+      <span>Persönliche Unterstützung für Computer, Handy, WLAN und Technik im Alltag</span>
+      <span><a href="#impressum">Impressum</a> · <a href="#datenschutz">Datenschutz</a></span>
     </div>
   </footer>
 
