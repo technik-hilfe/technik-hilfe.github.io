@@ -681,6 +681,123 @@
     .delay-2 { transition-delay: 160ms; }
     .delay-3 { transition-delay: 240ms; }
 
+    .about-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.about-card {
+  padding: 22px;
+  position: relative;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.about-card::after {
+  content: "";
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  right: -26px;
+  bottom: -26px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(217,239,255,0.78), rgba(217,239,255,0.40));
+  pointer-events: none;
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3.2;
+  border-radius: 18px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(19,136,255,0.10), rgba(89,190,52,0.10)),
+    rgba(255,255,255,0.72);
+  border: 1px solid rgba(8,34,74,0.06);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.about-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  text-align: center;
+  padding: 16px;
+  font-size: 0.92rem;
+}
+
+.about-photo-placeholder svg {
+  width: 28px;
+  height: 28px;
+  color: var(--blue-dark);
+  opacity: 0.9;
+}
+
+.about-card h3 {
+  margin-bottom: 6px;
+  font-size: 1.08rem;
+  line-height: 1.28;
+  max-width: 100%;
+}
+
+.about-role {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.about-card .copy {
+  max-width: 100%;
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.about-facts {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 2;
+}
+
+.about-fact {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.70);
+  border: 1px solid rgba(8,34,74,0.06);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.about-fact strong {
+  color: var(--blue-dark);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+    
     @media (max-width: 1120px) {
       .hero-grid,
       .contact-grid,
@@ -1032,9 +1149,9 @@
     <div class="section-head fade-up">
       <div>
         <div class="eyebrow">Über uns</div>
-        <h2>Zwei Ansprechpartner. Persönlich, regional und direkt erreichbar.</h2>
+        <h2>Die Menschen hinter der Technik-Hilfe.</h2>
       </div>
-      <p class="copy">Hinter Technik-Hilfe Bad Füssing stehen zwei feste Ansprechpartner. So bleibt die Unterstützung persönlich, verlässlich und nahbar.</p>
+      <p class="copy">Zwei feste Ansprechpartner, persönlich vor Ort und direkt erreichbar.</p>
     </div>
 
     <div class="about-grid">
